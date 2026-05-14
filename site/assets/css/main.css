@@ -91,29 +91,34 @@ h1, h2, h3, h4, h5 { margin: 0; font-family: var(--serif); font-weight: 500; let
 
 ::selection { background: var(--terracotta); color: var(--sand-light); }
 
-/* ---------- Custom Cursor (desktop only) ---------- */
-@media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
-  a, button, [role="button"], input, textarea, select { cursor: none; }
-  .cursor {
-    position: fixed; top: 0; left: 0; width: 14px; height: 14px;
-    background: var(--terracotta);
-    border-radius: 50%; pointer-events: none; z-index: 9999;
-    mix-blend-mode: multiply;
-    transform: translate(-50%, -50%);
-    transition: width .3s var(--ease-out), height .3s var(--ease-out), background .3s ease;
-  }
-  .cursor-ring {
-    position: fixed; top: 0; left: 0; width: 38px; height: 38px;
-    border: 1.5px solid var(--terracotta);
-    border-radius: 50%; pointer-events: none; z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: width .4s var(--ease-out), height .4s var(--ease-out), opacity .3s ease;
-  }
-  .cursor.active { width: 36px; height: 36px; opacity: .5; }
-  .cursor-ring.active { width: 70px; height: 70px; }
+/* ---------- Custom Cursor (opt-in via JS-added body.has-cursor) ---------- */
+.cursor, .cursor-ring {
+  position: fixed; top: 0; left: 0;
+  pointer-events: none;
+  display: none;
+  transform: translate(-50%, -50%);
 }
-@media (hover: none) { .cursor, .cursor-ring { display: none; } }
+.cursor {
+  width: 14px; height: 14px;
+  background: var(--terracotta);
+  border-radius: 50%;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+  transition: width .3s var(--ease-out), height .3s var(--ease-out), background .3s ease;
+}
+.cursor-ring {
+  width: 38px; height: 38px;
+  border: 1.5px solid var(--terracotta);
+  border-radius: 50%;
+  z-index: 9998;
+  transition: width .4s var(--ease-out), height .4s var(--ease-out), opacity .3s ease;
+}
+.cursor.active { width: 36px; height: 36px; opacity: .5; }
+.cursor-ring.active { width: 70px; height: 70px; }
+body.has-cursor { cursor: none; }
+body.has-cursor a, body.has-cursor button, body.has-cursor [role="button"],
+body.has-cursor input, body.has-cursor textarea, body.has-cursor select { cursor: none; }
+body.has-cursor .cursor, body.has-cursor .cursor-ring { display: block; }
 
 /* ---------- Container ---------- */
 .container { max-width: var(--container); padding-inline: var(--gutter); margin-inline: auto; }
@@ -1545,3 +1550,282 @@ section { position: relative; }
 .chapter-line__body { font-size: 16.5px; line-height: 1.75; color: var(--ink-mist); max-width: 640px; }
 @media (max-width: 700px) { .chapter-line { grid-template-columns: 1fr; gap: 8px; } }
 
+
+/* ========================================================================
+   MOBILE OPTIMIZATION — compact, less scrolling, beautifully tight
+   ======================================================================== */
+
+/* Tablet refinements */
+@media (max-width: 1000px) {
+  .feature-row { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .menu-pro-list { gap: 0 40px; }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --gutter: 18px;
+    --nav-h: 64px;
+  }
+
+  /* ---------- Section spacing tightened across the board ---------- */
+  .section { padding-block: 54px; }
+  .chapter { padding: 50px 0; }
+
+  /* ---------- Nav compact ---------- */
+  .nav__brand-mark { width: 38px; height: 38px; }
+  .nav__brand-th { font-size: 15px; }
+  .nav__brand-en { font-size: 9.5px; letter-spacing: 0.15em; }
+  .nav__cta { padding: 9px 14px; font-size: 11.5px; }
+  .nav__cta .arrow { width: 12px; height: 10px; }
+  .nav__cta-wrap { gap: 10px !important; }
+
+  /* ---------- Hero compact ---------- */
+  .hero__sun { width: 150px; height: 150px; top: 26%; right: 8%; }
+  .hero__title { font-size: clamp(44px, 12vw, 64px); }
+  .hero__lead { font-size: 15px; line-height: 1.55; margin-bottom: 28px; max-width: 100%; }
+  .hero__cta { gap: 10px; }
+  .hero__cta .btn { padding: 13px 22px; font-size: 12.5px; }
+  .hero__meta { right: 16px; bottom: 28px; }
+  .hero__rating { padding: 8px 12px; gap: 10px; }
+  .hero__rating .stars { font-size: 11px; }
+  .hero__rating .num { font-size: 16px; }
+  .hero__rating .label { font-size: 9px; }
+  .hero__scroll { display: none; }
+  .hero__eyebrow { font-size: 10px; letter-spacing: 0.26em; margin-bottom: 20px; }
+
+  /* ---------- Headings ---------- */
+  .section__title { font-size: clamp(28px, 7vw, 36px); line-height: 1.08; }
+  .section__lead { font-size: 14.5px; line-height: 1.6; }
+  .section__head { margin-bottom: 36px; }
+
+  /* ---------- Spec strip 2x2 tighter ---------- */
+  .spec__cell { padding: 22px 12px; }
+  .spec__no { font-size: 32px; }
+  .spec__lbl { font-size: 9px; letter-spacing: 0.22em; margin-top: 8px; }
+
+  /* ---------- Story (split section) ---------- */
+  .story__lead { font-size: 19px; line-height: 1.45; margin-bottom: 18px; }
+  .story p { font-size: 14.5px; line-height: 1.65; margin-bottom: 12px; }
+  .story__sign { font-size: 22px; margin-top: 18px; }
+  .split { gap: 32px; }
+
+  /* ---------- Signature feature row → 2-up grid even on phone ---------- */
+  .feature-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .dish-pro__art { aspect-ratio: 1 / 1; }
+  .dish-pro__body { padding: 14px 14px 16px; }
+  .dish-pro__no {
+    top: 12px; left: 12px; padding: 5px 9px;
+  }
+  .dish-pro__no .lbl { font-size: 7.5px; letter-spacing: 0.2em; }
+  .dish-pro__no .num { font-size: 14px; margin-top: 2px; }
+  .dish-pro__sig {
+    top: 12px; right: 12px;
+    width: 42px; height: 42px;
+    font-size: 6.5px; letter-spacing: 0.16em;
+  }
+  .dish-pro__sig .star { font-size: 9px; margin-bottom: 0; }
+  .dish-pro::before { inset: 5px; }
+  .dish-pro__corner { width: 13px; height: 13px; }
+  .dish-pro__corner.tl, .dish-pro__corner.tr { top: 9px; }
+  .dish-pro__corner.bl, .dish-pro__corner.br { bottom: 9px; }
+  .dish-pro__corner.tl, .dish-pro__corner.bl { left: 9px; }
+  .dish-pro__corner.tr, .dish-pro__corner.br { right: 9px; }
+  .dish-pro:hover .dish-pro__corner { width: 18px; height: 18px; }
+  .dish-pro__cat { font-size: 8.5px; letter-spacing: 0.22em; }
+  .dish-pro__name { font-size: 16px; line-height: 1.12; margin-top: 8px; }
+  .dish-pro__th { font-size: 14px; margin-top: 2px; }
+  .dish-pro__desc { display: none; } /* hide hint on mobile to save vertical space */
+  .dish-pro__foot { margin-top: 10px; padding-top: 10px; }
+  .dish-pro__foot .price { font-size: 14.5px; }
+  .dish-pro__foot .currency { font-size: 11px; }
+  .dish-pro__foot .chili-pro { font-size: 11px; }
+
+  /* ---------- Menu intro tighter ---------- */
+  .menu-intro { padding: calc(var(--nav-h) + 48px) 0 50px; }
+  .menu-intro__no { font-size: 10.5px; letter-spacing: 0.3em; }
+  .menu-intro__title { font-size: clamp(40px, 12vw, 60px); line-height: 0.96; }
+  .menu-intro__th { font-size: clamp(22px, 6vw, 30px); }
+  .menu-intro__lead { font-size: 14.5px; line-height: 1.65; margin-top: 26px; padding: 0 6px; }
+
+  /* ---------- Menu sticky nav ---------- */
+  .menu-nav__inner { padding: 10px 18px; gap: 4px; }
+  .menu-nav__btn { padding: 7px 12px; font-size: 11px; }
+  .menu-nav__btn .num { margin-right: 5px; font-size: 11px; }
+
+  /* ---------- Chapter headers compact ---------- */
+  .chapter__head { gap: 12px; margin-bottom: 32px; }
+  .chapter__no { font-size: clamp(64px, 18vw, 96px); opacity: .3; }
+  .chapter__title { font-size: clamp(28px, 8vw, 36px); }
+  .chapter__title-th { font-size: 20px; margin-top: 2px; }
+  .chapter__desc { font-size: 14px; line-height: 1.6; margin-top: 4px; }
+
+  /* ---------- Menu list entries — tighter ---------- */
+  .menu-pro-list { gap: 0; }
+  .entry {
+    grid-template-columns: 44px 1fr auto;
+    gap: 14px;
+    padding: 14px 0;
+  }
+  .entry__icon { width: 44px; height: 44px; }
+  .entry__icon svg { width: 40px; height: 40px; }
+  .entry__en { font-size: 16.5px; line-height: 1.2; }
+  .entry__th { font-size: 11.5px; }
+  .entry__sig { font-size: 7px; padding: 3px 6px; letter-spacing: 0.18em; }
+  .entry__sig::before { font-size: 9px; }
+  .entry__hint { font-size: 12.5px; line-height: 1.55; margin-top: 5px; }
+  .entry__price { font-size: 15px; gap: 2px; }
+  .entry__price .b { font-size: 11px; }
+  .entry__price small { font-size: 10px; }
+  .entry:hover { padding-left: 4px; }
+
+  /* ---------- CTA panel tighter ---------- */
+  .cta-panel { padding: 40px 24px; }
+  .cta-panel__inner { gap: 24px; }
+  .cta-panel__title { font-size: clamp(26px, 7vw, 34px); line-height: 1.08; }
+  .cta-panel__lead { font-size: 14px; line-height: 1.6; margin-top: 14px; }
+  .cta-panel__call { padding: 16px 18px; }
+  .cta-panel__call .label { font-size: 10px; }
+  .cta-panel__call .num { font-size: 24px; margin-top: 6px; }
+  .cta-panel__actions .btn { font-size: 13px; padding: 14px 22px; }
+
+  /* ---------- Reviews compact ---------- */
+  .reviews { gap: 14px; }
+  .review { padding: 22px 22px; }
+  .review__quote-mark { font-size: 60px; }
+  .review__quote { font-size: 17px; line-height: 1.4; }
+  .review__stars { margin-top: 16px; }
+  .review__by { font-size: 11.5px; }
+
+  /* ---------- Editorial pull-quote ---------- */
+  .editorial-quote { padding: 30px 0; }
+  .editorial-quote__no { font-size: 10px; letter-spacing: 0.26em; }
+  .editorial-quote__text { font-size: clamp(22px, 7vw, 30px); line-height: 1.22; margin: 18px 0; }
+  .editorial-quote__src { font-size: 10px; letter-spacing: 0.22em; }
+
+  /* ---------- Marquee compact ---------- */
+  .marquee { padding: 14px 0; }
+  .marquee__item { font-size: 18px; gap: 12px; }
+  .marquee__track { gap: 32px; }
+
+  /* ---------- Flourishes smaller ---------- */
+  .flourish { margin: 22px 0; gap: 12px; }
+  .flourish svg { width: 50px !important; }
+  .flourish::before, .flourish::after { max-width: 100px; }
+
+  /* ---------- Beach hero ---------- */
+  .beach-hero { padding-bottom: 50px; min-height: 90vh; min-height: 90svh; }
+  .beach-hero__title { font-size: clamp(44px, 12vw, 64px); }
+  .beach-hero__content p { font-size: 15px; line-height: 1.55; margin-top: 18px; }
+
+  /* ---------- Beach chapter line ---------- */
+  .chapter-line { padding: 22px 0; gap: 6px; }
+  .chapter-line__no { font-size: 36px; }
+  .chapter-line__title { font-size: 22px; margin-bottom: 6px; line-height: 1.2; }
+  .chapter-line__body { font-size: 14.5px; line-height: 1.6; }
+
+  /* ---------- Parallax quote ---------- */
+  .parallax { min-height: 56vh; }
+  .parallax__title { font-size: clamp(22px, 7vw, 30px); }
+
+  /* ---------- Beach gallery — 2 cols mix instead of single stack ---------- */
+  .gallery { gap: 10px; margin-top: 30px; }
+  .g1 { grid-column: span 12; aspect-ratio: 16/10; grid-row: auto; }
+  .g2 { grid-column: span 6; aspect-ratio: 1; }
+  .g3 { grid-column: span 6; aspect-ratio: 1; }
+  .g4, .g5, .g6 { grid-column: span 4; aspect-ratio: 1; }
+
+  /* ---------- Visit page ---------- */
+  .visit-hero { padding: calc(var(--nav-h) + 40px) 0 36px; }
+  .visit-grid { gap: 28px; margin-top: 24px; }
+  .postcard { padding: 22px 18px; }
+  .postcard__stamp { font-size: 10px; padding: 5px 12px; top: -14px; right: 18px; }
+  .info-list li {
+    grid-template-columns: 84px 1fr;
+    gap: 10px;
+    padding: 11px 0;
+    font-size: 13.5px;
+  }
+  .info-list .label { font-size: 9.5px; letter-spacing: 0.16em; padding-top: 2px; }
+  .map-frame { aspect-ratio: 4/3; }
+
+  /* ---------- Travel grid — 2 cols stay, compact ---------- */
+  .travel-grid { gap: 10px; margin-top: 22px; }
+  .travel { padding: 14px 14px; }
+  .travel__from { font-size: 10px; letter-spacing: 0.14em; }
+  .travel__time { font-size: 18px; margin: 4px 0; }
+  .travel__note { font-size: 12px; }
+
+  /* ---------- FAQ compact ---------- */
+  .faq-item { padding: 16px 0; }
+  .faq-item summary { font-size: 17px; gap: 14px; }
+  .faq-item summary::after { font-size: 22px; }
+  .faq-item p { font-size: 14px; line-height: 1.65; margin-top: 10px; }
+
+  /* ---------- Footer compact ---------- */
+  .footer { padding: 50px 0 28px; }
+  .footer::before { height: 60px; }
+  .footer__inner { gap: 30px 24px; }
+  .footer h4 { margin-bottom: 12px; font-size: 10px; letter-spacing: 0.18em; }
+  .footer__brand-mark { width: 60px; margin-bottom: 12px; }
+  .footer__name { font-size: 22px; }
+  .footer__th { font-size: 18px; }
+  .footer__tagline { font-size: 14px; margin-top: 10px; }
+  .footer ul li { font-size: 13.5px; }
+  .footer__bottom { margin-top: 38px; padding-top: 18px; font-size: 10px; letter-spacing: 0.06em; }
+
+  /* ---------- Reserve float positioned and sized for thumb ---------- */
+  .reserve-float {
+    bottom: 14px;
+    padding: 12px 22px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- idx / no-stamp compact ---------- */
+  .idx { font-size: 10.5px; letter-spacing: 0.26em; gap: 10px; }
+  .idx::before, .idx::after { width: 20px; }
+
+  /* hide custom cursor on touch */
+  .cursor, .cursor-ring { display: none !important; }
+}
+
+/* ---------- Very small phones (≤ 380px) ---------- */
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .nav__brand-en { display: none; }
+  .nav__cta { padding: 8px 12px; }
+  .nav__cta .arrow { display: none; }
+  .lang-toggle { display: none; }
+
+  .feature-row { gap: 10px; }
+  .dish-pro__body { padding: 12px 12px 14px; }
+  .dish-pro__name { font-size: 14.5px; }
+  .dish-pro__th { font-size: 12.5px; }
+  .dish-pro__cat { font-size: 8px; }
+  .dish-pro__foot .price { font-size: 13px; }
+  .dish-pro__sig { width: 38px; height: 38px; font-size: 6px; }
+
+  .spec__cell { padding: 18px 8px; }
+  .spec__no { font-size: 28px; }
+  .spec__lbl { font-size: 8.5px; }
+
+  .entry__icon { width: 40px; height: 40px; }
+  .entry__icon svg { width: 36px; height: 36px; }
+  .entry { grid-template-columns: 40px 1fr auto; gap: 12px; }
+  .entry__en { font-size: 15.5px; }
+  .entry__price { font-size: 14px; }
+
+  .menu-intro__title { font-size: 36px; }
+  .chapter__title { font-size: 26px; }
+  .chapter__no { font-size: 56px; }
+}
+
+/* ---------- Landscape phone — keep things tight vertically ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { min-height: 120vh; }
+  .hero__scroll, .hero__meta { display: none; }
+  .hero__sun { width: 100px; height: 100px; }
+}

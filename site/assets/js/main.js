@@ -3,9 +3,21 @@
 (() => {
   'use strict';
 
-  /* ---------- Custom cursor (desktop only) ---------- */
-  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  /* ---------- Move .nav__mobile OUT of .nav ----------
+     .nav has backdrop-filter when scrolled, which creates a fixed-position
+     containing block — that traps .nav__mobile inside the 64px nav and
+     causes its content to overflow into the page. Re-parent to body. */
+  const navMobileEl = document.querySelector('.nav__mobile');
+  const navHostEl = document.querySelector('.nav');
+  if (navMobileEl && navHostEl && navMobileEl.parentElement === navHostEl) {
+    document.body.appendChild(navMobileEl);
+  }
+
+  /* ---------- Custom cursor (desktop only, opt-in) ---------- */
+  const isTouch = matchMedia('(hover: none), (pointer: coarse)').matches || ('ontouchstart' in window);
+  const supportsHover = !isTouch && matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (supportsHover) {
+    document.body.classList.add('has-cursor');
     const dot = document.createElement('div');
     const ring = document.createElement('div');
     dot.className = 'cursor';
@@ -27,7 +39,7 @@
     };
     tick();
 
-    const interactive = 'a, button, [role="button"], .dish, .review, .nav__cta, summary, input, textarea';
+    const interactive = 'a, button, [role="button"], .dish, .dish-pro, .review, .nav__cta, summary, input, textarea';
     document.addEventListener('mouseover', e => {
       if (e.target.closest(interactive)) { dot.classList.add('active'); ring.classList.add('active'); }
     });
