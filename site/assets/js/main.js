@@ -155,8 +155,8 @@
   /* ---------- Hero parallax ---------- */
   const hero = document.querySelector('.hero');
   if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const sky = hero.querySelector('.hero__sky');
-    const sun = hero.querySelector('.hero__sun');
+    const isAnimated = hero.classList.contains('hero--animated');
+    const sun = isAnimated ? null : hero.querySelector('.hero__sun');
     const karsts = hero.querySelector('.hero__karsts');
     const sea = hero.querySelector('.hero__sea');
     const content = hero.querySelector('.hero__content');
@@ -167,7 +167,6 @@
       if (karsts) karsts.style.transform = `translateY(${y * 0.12}px)`;
       if (sea) sea.style.transform = `translateY(${y * -0.05}px)`;
       if (content) content.style.transform = `translateY(${y * 0.18}px)`;
-      if (sky) sky.style.opacity = Math.max(0, 1 - y / (window.innerHeight * 0.8));
     }, { passive: true });
   }
 

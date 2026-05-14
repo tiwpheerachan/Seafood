@@ -2021,3 +2021,207 @@ html[data-lang="th"] .cta-panel__title em {
 @media (prefers-reduced-motion: reduce) {
   .wok-corner * { animation: none !important; }
 }
+
+/* ========================================================================
+   DAY-NIGHT CYCLE — homepage hero only (scoped via .hero--animated)
+   60-second loop: sunrise → noon → sunset → night → loop
+   Uses @property for smooth interpolation of position + colors
+   ======================================================================== */
+
+@property --sun-x { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
+@property --sun-y { syntax: '<percentage>'; inherits: true; initial-value: 30%; }
+@property --sun-c { syntax: '<color>'; inherits: true; initial-value: #FFE9B5; }
+@property --sun-g { syntax: '<color>'; inherits: true; initial-value: #FFC57A; }
+@property --sun-o { syntax: '<number>'; inherits: true; initial-value: 1; }
+@property --sun-s { syntax: '<number>'; inherits: true; initial-value: 1; }
+
+.hero--animated {
+  background: #0A1226; /* night fallback under all sky layers */
+  animation: sun-cycle 60s linear infinite;
+}
+
+@keyframes sun-cycle {
+  /* Sunrise — sun just above horizon left */
+  0%   { --sun-x: 6%;  --sun-y: 80%; --sun-c: #FFB870; --sun-g: #F38A4B; --sun-o: 0.35; --sun-s: 0.85; }
+  /* Early morning */
+  8%   { --sun-x: 14%; --sun-y: 55%; --sun-c: #FFD08E; --sun-g: #FFC57A; --sun-o: 0.8;  --sun-s: 0.95; }
+  /* Late morning */
+  18%  { --sun-x: 28%; --sun-y: 28%; --sun-c: #FFEDC0; --sun-g: #FFE9B5; --sun-o: 1;    --sun-s: 1; }
+  /* Noon — highest point */
+  32%  { --sun-x: 50%; --sun-y: 14%; --sun-c: #FFFEE6; --sun-g: #FFE9B5; --sun-o: 1;    --sun-s: 1; }
+  /* Early afternoon */
+  44%  { --sun-x: 70%; --sun-y: 22%; --sun-c: #FFE7A8; --sun-g: #FFD580; --sun-o: 1;    --sun-s: 1.02; }
+  /* Late afternoon — getting golden */
+  52%  { --sun-x: 80%; --sun-y: 38%; --sun-c: #FFB870; --sun-g: #F38A4B; --sun-o: 1;    --sun-s: 1.08; }
+  /* Sunset peak */
+  60%  { --sun-x: 88%; --sun-y: 56%; --sun-c: #F38A4B; --sun-g: #D34A2C; --sun-o: 1;    --sun-s: 1.15; }
+  /* Setting — touching horizon */
+  65%  { --sun-x: 94%; --sun-y: 72%; --sun-c: #D34A2C; --sun-g: #8C3A4C; --sun-o: 0.7;  --sun-s: 1.05; }
+  /* Below horizon */
+  70%  { --sun-x: 100%; --sun-y: 90%; --sun-c: #8C3A4C; --sun-g: #5E3C5C; --sun-o: 0;   --sun-s: 0.7; }
+  /* Night — stays hidden */
+  90%  { --sun-x: 0%; --sun-y: 90%; --sun-c: #5E3C5C; --sun-g: #2F3B5C; --sun-o: 0;   --sun-s: 0.7; }
+  /* Pre-dawn */
+  96%  { --sun-x: 3%; --sun-y: 85%; --sun-c: #FFB870; --sun-g: #F38A4B; --sun-o: 0;   --sun-s: 0.8; }
+  100% { --sun-x: 6%; --sun-y: 80%; --sun-c: #FFB870; --sun-g: #F38A4B; --sun-o: 0.35; --sun-s: 0.85; }
+}
+
+/* --- Sun (driven by parent CSS variables) --- */
+.hero--animated .hero__sun {
+  top: var(--sun-y);
+  left: var(--sun-x);
+  right: auto;
+  width: 180px; height: 180px;
+  background: var(--sun-c);
+  box-shadow:
+    0 0 30px 6px var(--sun-g),
+    0 0 90px 30px var(--sun-g),
+    0 0 220px 80px var(--sun-g);
+  opacity: var(--sun-o);
+  transform: translate(-50%, -50%) scale(var(--sun-s));
+  filter: blur(2px);
+  z-index: 3;
+  animation: none; /* override the static sun-pulse */
+  will-change: top, left, opacity, transform, background, box-shadow;
+}
+
+/* --- Sky layers cross-fade --- */
+.hero--animated .hero__sky-layer {
+  position: absolute; inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity;
+}
+.hero--animated .hero__sky-day {
+  background: linear-gradient(180deg, #B5C9D9 0%, #E5D7B0 45%, #FCE0A8 78%, #FAD08A 100%);
+  animation: sky-day 60s linear infinite;
+}
+.hero--animated .hero__sky-golden {
+  background: linear-gradient(180deg, #F8C77F 0%, #F4A36D 30%, #DD6E4F 65%, #8C4E63 100%);
+  animation: sky-golden 60s linear infinite;
+}
+.hero--animated .hero__sky-sunset {
+  background: linear-gradient(180deg, #C24F4C 0%, #8C4E63 38%, #5E3C5C 70%, #2F3B5C 100%);
+  animation: sky-sunset 60s linear infinite;
+}
+.hero--animated .hero__sky-night {
+  background: linear-gradient(180deg, #1A2547 0%, #0F1830 55%, #0A1226 100%);
+  animation: sky-night 60s linear infinite;
+}
+
+@keyframes sky-day {
+  0%, 4%   { opacity: 1; }
+  22%      { opacity: 1; }
+  38%      { opacity: 0; }
+  88%      { opacity: 0; }
+  98%, 100% { opacity: 1; }
+}
+@keyframes sky-golden {
+  0%, 28%  { opacity: 0; }
+  42%      { opacity: 1; }
+  56%      { opacity: 0.8; }
+  68%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+@keyframes sky-sunset {
+  0%, 48%  { opacity: 0; }
+  60%      { opacity: 1; }
+  68%      { opacity: 1; }
+  78%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+@keyframes sky-night {
+  0%, 68%  { opacity: 0; }
+  76%      { opacity: 1; }
+  88%      { opacity: 1; }
+  94%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+/* --- Sun halo (radial glow that follows the sun) --- */
+.hero--animated .hero__sun-halo {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 800px 400px at var(--sun-x) var(--sun-y), var(--sun-g) 0%, transparent 60%);
+  opacity: calc(var(--sun-o) * 0.55);
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* --- Moon — rises at night --- */
+.hero--animated .hero__moon {
+  position: absolute;
+  width: 105px; height: 105px;
+  border-radius: 50%;
+  background: #F2E9D8;
+  box-shadow:
+    inset -16px -6px 24px rgba(180, 165, 130, 0.4),
+    0 0 30px 8px rgba(242, 233, 216, 0.4),
+    0 0 80px 24px rgba(242, 233, 216, 0.22);
+  opacity: 0;
+  z-index: 2;
+  filter: blur(0.5px);
+  transform: translate(-50%, -50%) scale(0.9);
+  animation: moon-cycle 60s linear infinite;
+}
+.hero--animated .hero__moon::before {
+  content: '';
+  position: absolute;
+  top: 22%; left: 28%;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(180, 165, 130, 0.4);
+}
+.hero--animated .hero__moon::after {
+  content: '';
+  position: absolute;
+  bottom: 28%; right: 32%;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(180, 165, 130, 0.3);
+}
+@keyframes moon-cycle {
+  0%, 66%   { top: 95%; left: 5%;  opacity: 0;    transform: translate(-50%, -50%) scale(0.75); }
+  73%       { top: 50%; left: 20%; opacity: 0.8;  transform: translate(-50%, -50%) scale(0.95); }
+  80%       { top: 22%; left: 38%; opacity: 0.95; transform: translate(-50%, -50%) scale(1); }
+  87%       { top: 20%; left: 60%; opacity: 0.95; transform: translate(-50%, -50%) scale(1); }
+  93%       { top: 50%; left: 88%; opacity: 0.4;  transform: translate(-50%, -50%) scale(0.9); }
+  96%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+}
+
+/* --- Stars container --- */
+.hero--animated .hero__stars {
+  position: absolute; inset: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  animation: stars-fade 60s linear infinite;
+}
+@keyframes stars-fade {
+  0%, 64%   { opacity: 0; }
+  74%, 90%  { opacity: 1; }
+  94%, 100% { opacity: 0; }
+}
+.hero--animated .hero__stars span {
+  position: absolute;
+  background: #FFFEE6;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 254, 230, 0.85);
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.4); }
+}
+
+@media (max-width: 760px) {
+  .hero--animated .hero__sun { width: 130px; height: 130px; }
+  .hero--animated .hero__moon { width: 75px; height: 75px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero--animated, .hero--animated * { animation: none !important; }
+  .hero--animated { background: linear-gradient(180deg, #FAD08A 0%, #F4A36D 26%, #DD6E4F 50%, #8C4E63 75%, #2F3B5C 100%); }
+  .hero--animated .hero__sun { top: 38%; left: auto; right: 18%; opacity: 1; transform: translate(0, 0); }
+}
