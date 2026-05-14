@@ -1854,3 +1854,170 @@ html[data-lang="th"] .cta-panel__title em {
   font-style: normal;
   color: var(--terracotta);
 }
+
+/* ========================================================================
+   WOK CORNER — stir-fry animation (menu page decoration)
+   ======================================================================== */
+.wok-corner {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 60;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  filter: drop-shadow(0 18px 28px rgba(82, 50, 25, 0.32));
+}
+.wok-corner__svg {
+  width: 150px;
+  height: 150px;
+  overflow: visible;
+}
+.wok-corner__label {
+  pointer-events: auto;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--brass-deep);
+  background: var(--paper);
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--brass-soft);
+  box-shadow: 0 8px 18px -8px rgba(82, 50, 25, 0.2);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.wok-corner__label .pulse {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  animation: wok-pulse 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes wok-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(200, 84, 43, 0.55); }
+  50% { transform: scale(1.3); opacity: .6; box-shadow: 0 0 0 6px rgba(200, 84, 43, 0); }
+}
+
+/* The wok rocks side-to-side like the chef's wrist */
+.wok-bowl {
+  transform-origin: 110px 145px;
+  transform-box: view-box;
+  animation: wok-toss 1.6s ease-in-out infinite;
+}
+@keyframes wok-toss {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  25% { transform: rotate(0deg) translateY(-3px); }
+  50% { transform: rotate(5deg) translateY(0); }
+  75% { transform: rotate(0deg) translateY(-3px); }
+}
+
+/* Flames flicker independently */
+.flame {
+  transform-origin: bottom center;
+  transform-box: fill-box;
+  animation: flicker 0.35s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+.flame--2 { animation-duration: 0.25s; animation-delay: 0.08s; }
+.flame--3 { animation-duration: 0.45s; animation-delay: 0.18s; }
+.flame--4 { animation-duration: 0.3s; animation-delay: 0.12s; }
+.flame--5 { animation-duration: 0.4s; animation-delay: 0.04s; }
+@keyframes flicker {
+  from { transform: scaleY(0.65) scaleX(1.15); opacity: 0.75; }
+  to { transform: scaleY(1.18) scaleX(0.88); opacity: 1; }
+}
+
+/* Glow under wok */
+.wok-glow {
+  animation: glow-pulse 1.6s ease-in-out infinite;
+}
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+/* Steam wisps rising */
+.steam {
+  transform-box: fill-box;
+  animation: steam-rise 2.6s ease-in infinite;
+  opacity: 0;
+}
+.steam--2 { animation-delay: 0.7s; animation-duration: 2.8s; }
+.steam--3 { animation-delay: 1.4s; animation-duration: 2.2s; }
+@keyframes steam-rise {
+  0% { transform: translate(0, 0) scale(0.7); opacity: 0; }
+  15% { opacity: 0.8; }
+  100% { transform: translate(8px, -75px) scale(1.6); opacity: 0; }
+}
+
+/* Tossed ingredients — each does an arc with rotation */
+.ingredient {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.ing--shrimp { animation: toss-shrimp 1.6s ease-in-out infinite; }
+.ing--chili  { animation: toss-chili  1.6s ease-in-out infinite .15s; }
+.ing--basil  { animation: toss-basil  1.6s ease-in-out infinite .3s; }
+.ing--garlic { animation: toss-garlic 1.6s ease-in-out infinite .45s; }
+@keyframes toss-shrimp {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  35% { transform: translate(-12px, -52px) rotate(180deg); }
+  55% { transform: translate(-16px, -58px) rotate(280deg); }
+}
+@keyframes toss-chili {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  45% { transform: translate(8px, -62px) rotate(280deg); }
+  60% { transform: translate(12px, -66px) rotate(360deg); }
+}
+@keyframes toss-basil {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  40% { transform: translate(18px, -48px) rotate(-180deg); }
+  60% { transform: translate(22px, -52px) rotate(-250deg); }
+}
+@keyframes toss-garlic {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-6px, -56px) rotate(220deg); }
+}
+
+/* Wok-hei sparkles */
+.spark {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spark-fly 1.2s ease-out infinite;
+  opacity: 0;
+}
+.spark--2 { animation-delay: 0.3s; }
+.spark--3 { animation-delay: 0.6s; }
+.spark--4 { animation-delay: 0.9s; }
+.spark--5 { animation-delay: 1.1s; }
+@keyframes spark-fly {
+  0% { transform: translate(0, 0) scale(0); opacity: 0; }
+  30% { transform: translate(-3px, -10px) scale(1); opacity: 1; }
+  100% { transform: translate(-12px, -38px) scale(0.2); opacity: 0; }
+}
+
+/* Mobile: smaller, lifted above reserve-float */
+@media (max-width: 760px) {
+  .wok-corner {
+    bottom: 76px;
+    left: 14px;
+    gap: 6px;
+  }
+  .wok-corner__svg { width: 96px; height: 96px; }
+  .wok-corner__label { font-size: 9px; padding: 4px 9px; letter-spacing: 0.2em; }
+  .wok-corner__label .pulse { width: 5px; height: 5px; }
+}
+
+@media (max-width: 380px) {
+  .wok-corner { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wok-corner * { animation: none !important; }
+}
