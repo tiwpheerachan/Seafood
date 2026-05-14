@@ -12,6 +12,13 @@
 
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<script>
+try {
+  var l = localStorage.getItem('rabeunglay-lang') || 'en';
+  document.documentElement.dataset.lang = l;
+  document.documentElement.lang = l;
+} catch(e) {}
+</script>
 </head>
 <body>
 
@@ -26,10 +33,10 @@
       </span>
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a class="nav__link" href="index.html">Home</a>
-      <a class="nav__link" href="menu.html">Menu</a>
-      <a class="nav__link is-active" href="the-beach.html">The Beach</a>
-      <a class="nav__link" href="visit.html">Visit</a>
+      <a class="nav__link" href="index.html" data-th="หน้าแรก">Home</a>
+      <a class="nav__link" href="menu.html" data-th="เมนู">Menu</a>
+      <a class="nav__link is-active" href="the-beach.html" data-th="ชายหาด">The Beach</a>
+      <a class="nav__link" href="visit.html" data-th="มาเยือน">Visit</a>
     </nav>
     <div class="nav__cta-wrap" style="display:flex;gap:14px;align-items:center;">
       <div class="lang-toggle" role="group" aria-label="Language">
@@ -37,17 +44,17 @@
         <button data-lang="th">ไทย</button>
       </div>
       <a class="nav__cta" data-magnet href="visit.html#reserve">
-        Hold a table
+        <span data-th="จองโต๊ะ">Hold a table</span>
         <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav__mobile">
-    <a href="index.html">Home <span class="th">หน้าแรก</span></a>
-    <a href="menu.html">Menu <span class="th">เมนู</span></a>
-    <a href="the-beach.html">The Beach <span class="th">ชายหาด</span></a>
-    <a href="visit.html">Visit <span class="th">มาเยือน</span></a>
+    <a href="index.html"><span data-th="หน้าแรก">Home</span> <span class="th lang-en">หน้าแรก</span></a>
+    <a href="menu.html"><span data-th="เมนู">Menu</span> <span class="th lang-en">เมนู</span></a>
+    <a href="the-beach.html"><span data-th="ชายหาด">The Beach</span> <span class="th lang-en">ชายหาด</span></a>
+    <a href="visit.html"><span data-th="มาเยือน">Visit</span> <span class="th lang-en">มาเยือน</span></a>
   </div>
 </header>
 
@@ -65,12 +72,12 @@
   </div>
   <div class="hero__sand"></div>
   <div class="container beach-hero__content">
-    <div class="hero__eyebrow"><span class="dot"></span> Aqua Beach · หาดอควา</div>
+    <div class="hero__eyebrow"><span class="dot"></span> <span class="lang-en">Aqua Beach · หาดอควา</span><span class="lang-th">หาดอควา</span></div>
     <h1 class="beach-hero__title">
-      <span style="display:block;">The place</span>
-      <span style="display:block;font-style:italic;">is the meal.</span>
+      <span class="lang-en"><span style="display:block;">The place</span><span style="display:block;font-style:italic;">is the meal.</span></span>
+      <span class="lang-th"><span style="display:block;">สถานที่</span><span style="display:block;font-style:italic;">คืออาหาร</span></span>
     </h1>
-    <p style="max-width:520px;margin-top:24px;font-size:19px;line-height:1.55;color:rgba(249,244,233,0.92);">A photo-led walk down the beach. Tables on sand, thatched roofs, karsts on the horizon, and the slow change of light from gold to violet.</p>
+    <p style="max-width:520px;margin-top:24px;font-size:19px;line-height:1.55;color:rgba(249,244,233,0.92);"><span class="lang-en">A photo-led walk down the beach. Tables on sand, thatched roofs, karsts on the horizon, and the slow change of light from gold to violet.</span><span class="lang-th">เดินเลียบชายหาดด้วยภาพถ่าย โต๊ะบนทราย หลังคามุงจาก เขาหินปูนปลายขอบฟ้า และแสงที่ค่อยๆ เปลี่ยนจากสีทองสู่สีม่วง</span></p>
   </div>
 </section>
 
@@ -79,13 +86,14 @@
   <div class="container">
     <div class="split">
       <div class="story reveal">
-        <div class="eyebrow">The veranda · ระเบียง</div>
+        <div class="eyebrow"><span class="lang-en">The veranda · ระเบียง</span><span class="lang-th">ระเบียง</span></div>
         <h2 class="section__title" style="margin-top:22px;">
-          ระเบียงเล <em>literally means</em><br>"sea veranda."
+          <span class="lang-en">ระเบียงเล <em>literally means</em><br>"sea veranda."</span>
+          <span class="lang-th">ระเบียงเล <em>แปลว่า</em><br>"ระเบียงทะเล"</span>
         </h2>
-        <p class="story__lead">And the place lives up to the name.</p>
-        <p>Long wooden tables under thatched roofs. Low Thai-style mats on raised wood platforms with cushions for the more relaxed crowd. Tables right on the sand for sunset. Open-air on every side.</p>
-        <p>The best seats are the ones closest to the waterline at sunset. Arrive by 5:30 PM in high season to claim them.</p>
+        <p class="story__lead"><span class="lang-en">And the place lives up to the name.</span><span class="lang-th">และที่นี่ก็สมชื่อจริงๆ</span></p>
+        <p><span class="lang-en">Long wooden tables under thatched roofs. Low Thai-style mats on raised wood platforms with cushions for the more relaxed crowd. Tables right on the sand for sunset. Open-air on every side.</span><span class="lang-th">โต๊ะไม้ยาวใต้หลังคามุงจาก แคร่ไม้สไตล์ไทยพร้อมเบาะนุ่มสำหรับลูกค้าที่อยากสบายๆ โต๊ะบนผืนทรายไว้ดูพระอาทิตย์ตก เปิดโล่งทุกด้าน</span></p>
+        <p><span class="lang-en">The best seats are the ones closest to the waterline at sunset. Arrive by 5:30 PM in high season to claim them.</span><span class="lang-th">ที่นั่งดีที่สุดคือที่นั่งใกล้น้ำตอนพระอาทิตย์ตก ช่วงไฮซีซั่นมาถึงก่อน 17:30 เพื่อจับจอง</span></p>
       </div>
       <div class="frame reveal reveal--delay-1">
         <div class="frame__scene">
@@ -125,8 +133,8 @@
     </div>
   </div>
   <h2 class="parallax__title">
-    "The sunset view is half the meal.<br>
-    The other half is the tom yum."
+    <span class="lang-en">"The sunset view is half the meal.<br>The other half is the tom yum."</span>
+    <span class="lang-th">"พระอาทิตย์ตกคือครึ่งของมื้ออาหาร<br>อีกครึ่งคือต้มยำ"</span>
   </h2>
 </section>
 
@@ -134,10 +142,10 @@
 <section class="section section--sand">
   <div class="container">
     <div class="section__head reveal">
-      <div class="eyebrow">A walk down the beach · เดินบนชายหาด</div>
+      <div class="eyebrow"><span class="lang-en">A walk down the beach · เดินบนชายหาด</span><span class="lang-th">เดินบนชายหาด</span></div>
       <h2 class="section__title">
-        From <em>golden hour</em> to lantern light.
-        <span class="th">จากแสงสุดท้ายของวัน สู่แสงโคมไฟ</span>
+        <span class="lang-en">From <em>golden hour</em> to lantern light.<span class="th">จากแสงสุดท้ายของวัน สู่แสงโคมไฟ</span></span>
+        <span class="lang-th">จาก<em>แสงทอง</em>สู่แสงโคมไฟ</span>
       </h2>
     </div>
 
@@ -428,10 +436,10 @@
 <section class="section" style="background: var(--paper);">
   <div class="container">
     <div class="section__head reveal" style="text-align:center;margin-inline:auto;">
-      <div class="idx idx--solo" style="justify-content:center;">No. 02 — A day on the veranda</div>
+      <div class="idx idx--solo" style="justify-content:center;"><span class="lang-en">No. 02 — A day on the veranda</span><span class="lang-th">ฉบับที่ ๐๒ — หนึ่งวันบนระเบียง</span></div>
       <h2 class="section__title" style="margin-top:20px;">
-        Three <em>chapters</em> in the same day.
-        <span class="th">หนึ่งวัน สามเรื่องราว</span>
+        <span class="lang-en">Three <em>chapters</em> in the same day.<span class="th">หนึ่งวัน สามเรื่องราว</span></span>
+        <span class="lang-th">สาม<em>เรื่องราว</em>ในหนึ่งวัน</span>
       </h2>
     </div>
 
@@ -439,22 +447,22 @@
       <div class="chapter-line reveal">
         <div class="chapter-line__no">i.</div>
         <div>
-          <h3 class="chapter-line__title">11:30 – 14:30 · <em>The long lunch.</em></h3>
-          <p class="chapter-line__body">Order more than you should. Take the breeze. Coconut water, cold beer, fish straight from the morning's boats. The pace is unhurried — no one is asking for the bill.</p>
+          <h3 class="chapter-line__title">11:30 – 14:30 · <span class="lang-en"><em>The long lunch.</em></span><span class="lang-th"><em>มื้อกลางวันยาวนาน</em></span></h3>
+          <p class="chapter-line__body"><span class="lang-en">Order more than you should. Take the breeze. Coconut water, cold beer, fish straight from the morning's boats. The pace is unhurried — no one is asking for the bill.</span><span class="lang-th">สั่งเยอะกว่าที่คิด รับลมทะเล น้ำมะพร้าว เบียร์เย็น ปลาจากเรือเช้านี้ ไม่มีใครรีบ — ไม่มีใครถามบิล</span></p>
         </div>
       </div>
       <div class="chapter-line reveal">
         <div class="chapter-line__no">ii.</div>
         <div>
-          <h3 class="chapter-line__title">17:30 – 19:00 · <em>Golden hour.</em></h3>
-          <p class="chapter-line__body">The signature time slot. The sky goes gold, then pink, then violet over the karsts. Reserve in advance, or arrive by 5:30 to claim a sand-side table. Mussels, tom yum, one whole fish for the middle.</p>
+          <h3 class="chapter-line__title">17:30 – 19:00 · <span class="lang-en"><em>Golden hour.</em></span><span class="lang-th"><em>ชั่วโมงสีทอง</em></span></h3>
+          <p class="chapter-line__body"><span class="lang-en">The signature time slot. The sky goes gold, then pink, then violet over the karsts. Reserve in advance, or arrive by 5:30 to claim a sand-side table. Mussels, tom yum, one whole fish for the middle.</span><span class="lang-th">ช่วงเวลาซิกเนเจอร์ ฟ้าเปลี่ยนจากสีทอง สู่สีชมพู สู่สีม่วงเหนือเขาหินปูน จองล่วงหน้า หรือมาก่อน 17:30 เพื่อจองโต๊ะริมทราย หอยแมลงภู่ ต้มยำ ปลาทั้งตัวหนึ่งจานไว้กลางโต๊ะ</span></p>
         </div>
       </div>
       <div class="chapter-line reveal">
         <div class="chapter-line__no">iii.</div>
         <div>
-          <h3 class="chapter-line__title">19:30 – 21:30 · <em>Lantern hours.</em></h3>
-          <p class="chapter-line__body">Quieter. Lanterns on. The karsts fade to silhouette and the bowls of mussels keep arriving. The kitchen closes at 9:30 — last call at 9:00. Stay for one more beer.</p>
+          <h3 class="chapter-line__title">19:30 – 21:30 · <span class="lang-en"><em>Lantern hours.</em></span><span class="lang-th"><em>ชั่วโมงโคมไฟ</em></span></h3>
+          <p class="chapter-line__body"><span class="lang-en">Quieter. Lanterns on. The karsts fade to silhouette and the bowls of mussels keep arriving. The kitchen closes at 9:30 — last call at 9:00. Stay for one more beer.</span><span class="lang-th">เงียบลง โคมไฟเริ่มสว่าง เขาหินปูนกลายเป็นเงาดำ ชามหอยแมลงภู่ยังคงทยอยมา ครัวปิด 21:30 น. — สั่งครั้งสุดท้าย 21:00 อยู่ต่ออีกแก้วเถอะ</span></p>
         </div>
       </div>
     </div>
@@ -471,15 +479,15 @@
     <div class="cta-panel reveal">
       <div class="cta-panel__inner">
         <div>
-          <h2 class="cta-panel__title">Save the seat<br>with the <em>view</em>.</h2>
-          <p class="cta-panel__lead">Sunset tables go first. Reserve at least a day ahead in high season. We'll save the one closest to the waterline.</p>
+          <h2 class="cta-panel__title"><span class="lang-en">Save the seat<br>with the <em>view</em>.</span><span class="lang-th">จองที่นั่ง<br><em>วิวสวย</em>ที่สุด</span></h2>
+          <p class="cta-panel__lead"><span class="lang-en">Sunset tables go first. Reserve at least a day ahead in high season. We'll save the one closest to the waterline.</span><span class="lang-th">โต๊ะรับพระอาทิตย์ตกหมดเร็ว ช่วงไฮซีซั่นควรจองล่วงหน้าอย่างน้อยหนึ่งวัน เราจะเก็บโต๊ะใกล้ทะเลที่สุดให้คุณ</span></p>
         </div>
         <div class="cta-panel__actions">
-          <a class="btn btn--white" data-magnet href="visit.html#reserve">Reserve via Facebook DM
+          <a class="btn btn--white" data-magnet href="visit.html#reserve"><span data-th="จองผ่าน Facebook DM">Reserve via Facebook DM</span>
             <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="cta-panel__call" href="tel:+66815163950">
-            <span class="label">Or call · โทร</span>
+            <span class="label"><span class="lang-en">Or call · โทร</span><span class="lang-th">หรือโทร · Call</span></span>
             <span class="num">081 516 3950</span>
           </a>
         </div>
@@ -496,18 +504,18 @@
         <img class="footer__brand-mark" src="assets/img/logo.svg" alt="">
         <div class="footer__name">Ra Beung Lay Seafood</div>
         <div class="footer__th">ระเบียงเล ซีฟู้ด</div>
-        <p class="footer__tagline">Where the sea meets the table.</p>
+        <p class="footer__tagline"><span class="lang-en">Where the sea meets the table.</span><span class="lang-th">ที่ทะเลพบกับโต๊ะอาหาร</span></p>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h4 data-th="มาเยือน">Visit</h4>
         <ul>
-          <li>10 Moo 5, Sai Thai<br>Mueang Krabi, 81000</li>
+          <li><span class="lang-en">10 Moo 5, Sai Thai<br>Mueang Krabi, 81000</span><span class="lang-th">10 หมู่ 5 ตำบลไสไทย<br>เมืองกระบี่ 81000</span></li>
           <li><a href="tel:+66815163950">081 516 3950</a></li>
-          <li>Daily · 11:00 – 21:30</li>
+          <li><span class="lang-en">Daily · 11:00 – 21:30</span><span class="lang-th">ทุกวัน · 11:00 – 21:30 น.</span></li>
         </ul>
       </div>
       <div>
-        <h4>The site</h4>
+        <h4 data-th="หน้าเว็บไซต์">The site</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
@@ -516,7 +524,7 @@
         </ul>
       </div>
       <div>
-        <h4>Follow</h4>
+        <h4 data-th="ติดตาม">Follow</h4>
         <ul>
           <li><a href="https://www.facebook.com/search/top?q=Ra+Beung+Lay+Seafood+Aqua+Beach">Facebook</a></li>
           <li><a href="https://www.google.com/maps/search/Ra+Beung+Lay+Seafood+Krabi">Google Maps</a></li>
@@ -526,13 +534,13 @@
     </div>
     <div class="footer__bottom">
       <div>© <span data-year>2026</span> Ra Beung Lay Seafood.</div>
-      <div>Designed for the sea breeze · Built with aloha.</div>
+      <div><span class="lang-en">Designed for the sea breeze · Built with aloha.</span><span class="lang-th">ออกแบบโดยรับลมทะเล · สร้างด้วยอะโลฮ่า</span></div>
     </div>
   </div>
 </footer>
 
 <a class="reserve-float" href="visit.html#reserve">
-  Hold a table
+  <span data-th="จองโต๊ะ">Hold a table</span>
   <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
 

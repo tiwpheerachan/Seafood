@@ -43,6 +43,13 @@
   }
 }
 </script>
+<script>
+try {
+  var l = localStorage.getItem('rabeunglay-lang') || 'en';
+  document.documentElement.dataset.lang = l;
+  document.documentElement.lang = l;
+} catch(e) {}
+</script>
 </head>
 <body>
 
@@ -57,10 +64,10 @@
       </span>
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a class="nav__link is-active" href="index.html">Home</a>
-      <a class="nav__link" href="menu.html">Menu</a>
-      <a class="nav__link" href="the-beach.html">The Beach</a>
-      <a class="nav__link" href="visit.html">Visit</a>
+      <a class="nav__link is-active" href="index.html" data-th="หน้าแรก">Home</a>
+      <a class="nav__link" href="menu.html" data-th="เมนู">Menu</a>
+      <a class="nav__link" href="the-beach.html" data-th="ชายหาด">The Beach</a>
+      <a class="nav__link" href="visit.html" data-th="มาเยือน">Visit</a>
     </nav>
     <div class="nav__cta-wrap" style="display:flex;gap:14px;align-items:center;">
       <div class="lang-toggle" role="group" aria-label="Language">
@@ -68,17 +75,17 @@
         <button data-lang="th">ไทย</button>
       </div>
       <a class="nav__cta" data-magnet href="visit.html#reserve">
-        Hold a table
+        <span data-th="จองโต๊ะ">Hold a table</span>
         <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav__mobile">
-    <a href="index.html">Home <span class="th">หน้าแรก</span></a>
-    <a href="menu.html">Menu <span class="th">เมนู</span></a>
-    <a href="the-beach.html">The Beach <span class="th">ชายหาด</span></a>
-    <a href="visit.html">Visit <span class="th">มาเยือน</span></a>
+    <a href="index.html"><span data-th="หน้าแรก">Home</span> <span class="th lang-en">หน้าแรก</span></a>
+    <a href="menu.html"><span data-th="เมนู">Menu</span> <span class="th lang-en">เมนู</span></a>
+    <a href="the-beach.html"><span data-th="ชายหาด">The Beach</span> <span class="th lang-en">ชายหาด</span></a>
+    <a href="visit.html"><span data-th="มาเยือน">Visit</span> <span class="th lang-en">มาเยือน</span></a>
   </div>
 </header>
 
@@ -103,22 +110,25 @@
   <div class="hero__content">
     <div class="hero__eyebrow">
       <span class="dot"></span>
-      Aqua Beach · Krabi · est. on the sand
+      <span data-th="หาดอควา · กระบี่ · ก่อตั้งบนผืนทราย">Aqua Beach · Krabi · est. on the sand</span>
     </div>
     <h1 class="hero__title">
-      <span>Seafood by</span>
-      <span>the sea.</span>
+      <span class="lang-en">Seafood by</span>
+      <span class="lang-en">the sea.</span>
+      <span class="lang-th">ซีฟู้ด</span>
+      <span class="lang-th">ริมทะเล</span>
       <span class="thai-display">ระเบียงเล ซีฟู้ด</span>
     </h1>
     <p class="hero__lead">
-      Family-run on Aqua Beach for more than a decade. Krabi karsts on the horizon. Tom yum on the way, mussels in a bowl bigger than your head, and a sunset that does the rest of the work.
+      <span class="lang-en">Family-run on Aqua Beach for more than a decade. Krabi karsts on the horizon. Tom yum on the way, mussels in a bowl bigger than your head, and a sunset that does the rest of the work.</span>
+      <span class="lang-th">ร้านครอบครัวบนหาดอความากว่าทศวรรษ เขาหินปูนกระบี่ที่ปลายขอบฟ้า ต้มยำกำลังมา หอยแมลงภู่ในชามใหญ่กว่าหัว และพระอาทิตย์ตกที่ทำหน้าที่ที่เหลือให้เอง</span>
     </p>
     <div class="hero__cta">
       <a class="btn btn--primary" data-magnet href="visit.html#reserve">
-        Hold a table for sunset
+        <span data-th="จองโต๊ะรับพระอาทิตย์ตก">Hold a table for sunset</span>
         <svg class="arrow" width="16" height="14" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a class="btn btn--white" href="menu.html">See what's on the table</a>
+      <a class="btn btn--white" href="menu.html" data-th="ดูเมนูของเรา">See what's on the table</a>
     </div>
   </div>
 
@@ -127,13 +137,13 @@
       <div class="stars">★ ★ ★ ★ ★</div>
       <div>
         <div class="num">4.8</div>
-        <div class="label">3,087 Google reviews</div>
+        <div class="label" data-th="3,087 รีวิว Google">3,087 Google reviews</div>
       </div>
     </div>
   </div>
 
   <div class="hero__scroll">
-    <div>Scroll</div>
+    <div data-th="เลื่อน">Scroll</div>
     <div class="line"></div>
   </div>
 </section>
@@ -144,19 +154,19 @@
     <div class="spec reveal">
       <div class="spec__cell">
         <div class="spec__no"><span data-count="3087">0</span>+</div>
-        <div class="spec__lbl">Five-star reviews</div>
+        <div class="spec__lbl" data-th="รีวิวห้าดาว">Five-star reviews</div>
       </div>
       <div class="spec__cell">
         <div class="spec__no"><span data-count="4.8">0</span>★</div>
-        <div class="spec__lbl">Google rating</div>
+        <div class="spec__lbl" data-th="คะแนน Google">Google rating</div>
       </div>
       <div class="spec__cell">
         <div class="spec__no"><span data-count="10">0</span>+</div>
-        <div class="spec__lbl">Years on Aqua Beach</div>
+        <div class="spec__lbl" data-th="ปี บนหาดอควา">Years on Aqua Beach</div>
       </div>
       <div class="spec__cell">
         <div class="spec__no">07</div>
-        <div class="spec__lbl">Signature dishes</div>
+        <div class="spec__lbl" data-th="เมนูซิกเนเจอร์">Signature dishes</div>
       </div>
     </div>
   </div>
@@ -167,16 +177,24 @@
   <div class="container">
     <div class="split">
       <div class="story reveal">
-        <div class="idx">No. 01 — Our table · โต๊ะของเรา</div>
+        <div class="idx"><span class="lang-en">No. 01 — Our table · โต๊ะของเรา</span><span class="lang-th">ฉบับที่ ๐๑ — โต๊ะของเรา</span></div>
         <h2 class="section__title" style="margin-top: 22px;">
-          The boats land at <em>Ao Nam Mao</em><br>
-          in the morning.
-          <span class="th th-ink">เรือเข้าฝั่งตอนเช้า · ครัวเปิดตอนเที่ยง</span>
+          <span class="lang-en">The boats land at <em>Ao Nam Mao</em><br>in the morning.<span class="th th-ink">เรือเข้าฝั่งตอนเช้า · ครัวเปิดตอนเที่ยง</span></span>
+          <span class="lang-th">เรือเข้าฝั่งที่ <em>อ่าวน้ำเมา</em><br>ทุกเช้า</span>
         </h2>
-        <p class="story__lead">By midday the kitchen is moving. By sunset the long tables fill up, the karsts go pink, and nobody's in any hurry to leave.</p>
-        <p>The menu is southern Thai — deep-fried whole fish with three-flavor sauce, steamed mussels with seafood dipping sauce, tom yum with whatever was best at market, and the curries that make this part of Thailand worth flying to. Massaman. Spicy shrimp. The rice salad called <em>Khao Yum</em> that tastes like nowhere else.</p>
-        <p>Ra Beung Lay isn't fine dining. It isn't trying to be. It's the kind of restaurant that earns three thousand five-star reviews because it does the simple things — fresh seafood, generous portions, a view that does the rest of the work — without any of the fuss.</p>
-        <div class="story__sign">— see you on the veranda</div>
+        <p class="story__lead">
+          <span class="lang-en">By midday the kitchen is moving. By sunset the long tables fill up, the karsts go pink, and nobody's in any hurry to leave.</span>
+          <span class="lang-th">พอเที่ยง ครัวก็เริ่มเดิน พอพระอาทิตย์ตก โต๊ะยาวก็เต็ม เขาหินปูนเปลี่ยนเป็นสีชมพู และไม่มีใครรีบกลับบ้าน</span>
+        </p>
+        <p>
+          <span class="lang-en">The menu is southern Thai — deep-fried whole fish with three-flavor sauce, steamed mussels with seafood dipping sauce, tom yum with whatever was best at market, and the curries that make this part of Thailand worth flying to. Massaman. Spicy shrimp. The rice salad called <em>Khao Yum</em> that tastes like nowhere else.</span>
+          <span class="lang-th">เมนูของเราคืออาหารใต้ — ปลาทอดราดสามรส หอยแมลงภู่นึ่งกับน้ำจิ้มซีฟู้ด ต้มยำกับวัตถุดิบที่ดีที่สุดในตลาดวันนั้น และแกงที่ทำให้ภาคใต้ของไทยน่าบินมา มัสมั่น ฉู่ฉี่กุ้ง และข้าวยำที่อร่อยไม่เหมือนที่ไหน</span>
+        </p>
+        <p>
+          <span class="lang-en">Ra Beung Lay isn't fine dining. It isn't trying to be. It's the kind of restaurant that earns three thousand five-star reviews because it does the simple things — fresh seafood, generous portions, a view that does the rest of the work — without any of the fuss.</span>
+          <span class="lang-th">ระเบียงเลไม่ใช่ร้านหรู และไม่พยายามเป็น เราเป็นร้านที่ได้รีวิวห้าดาวสามพันรีวิว เพราะทำของง่ายๆ ให้ดี — อาหารทะเลสด สั่งครั้งเดียวอิ่ม วิวที่ทำงานที่เหลือให้เอง — โดยไม่มีพิธีรีตอง</span>
+        </p>
+        <div class="story__sign"><span class="lang-en">— see you on the veranda</span><span class="lang-th">— พบกันที่ระเบียง</span></div>
       </div>
       <div class="frame frame--landscape reveal reveal--delay-1">
         <div class="frame__scene">
@@ -218,12 +236,15 @@
 <section class="section" style="background: var(--paper);">
   <div class="container">
     <div class="section__head section__head--center reveal">
-      <div class="idx idx--solo" style="justify-content:center;">No. 02 — Curator's Selection</div>
+      <div class="idx idx--solo" style="justify-content:center;"><span class="lang-en">No. 02 — Curator's Selection</span><span class="lang-th">ฉบับที่ ๐๒ — เมนูคัดสรร</span></div>
       <h2 class="section__title" style="margin-top:20px;">
-        <em>Seven dishes</em> the regulars<br>order without looking.
-        <span class="th">เจ็ดเมนูที่ลูกค้าประจำสั่งไม่ต้องดูเมนู</span>
+        <span class="lang-en"><em>Seven dishes</em> the regulars<br>order without looking.<span class="th">เจ็ดเมนูที่ลูกค้าประจำสั่งไม่ต้องดูเมนู</span></span>
+        <span class="lang-th"><em>เจ็ดเมนู</em> ที่ขาประจำ<br>สั่งโดยไม่ต้องดูเมนู</span>
       </h2>
-      <p class="section__lead" style="margin-inline:auto;">Confirmed customer favorites across three thousand reviews. Order one of each — that's the brief.</p>
+      <p class="section__lead" style="margin-inline:auto;">
+        <span class="lang-en">Confirmed customer favorites across three thousand reviews. Order one of each — that's the brief.</span>
+        <span class="lang-th">เมนูยอดนิยมจากกว่าสามพันรีวิว สั่งครบทั้งหมดแล้วแชร์กัน — เท่านี้ก็พอแล้ว</span>
+      </p>
       <div class="flourish" style="margin-top: 28px;">
         <svg style="color:var(--brass);width:80px;"><use href="assets/img/filigree.svg#flourish-lotus"/></svg>
       </div>
@@ -233,29 +254,29 @@
       <a class="dish-pro reveal" href="menu.html#tom-yum-and-soups">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">01</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">01</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-tomyum"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Tom Yum & Soups</div>
-          <h3 class="dish-pro__name">Seafood Tom Yum</h3>
-          <div class="dish-pro__th">ต้มยำทะเลรวม</div>
-          <p class="dish-pro__desc">Mixed prawns, squid and fish in classic spicy-sour broth. The dish reviewers come back for.</p>
-          <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>350–550</span><span class="chili-pro">🌶 spicy</span></div>
+          <div class="dish-pro__cat"><span class="lang-en">Tom Yum & Soups</span><span class="lang-th">ต้มยำและซุป</span></div>
+          <h3 class="dish-pro__name" data-th="ต้มยำทะเลรวม">Seafood Tom Yum</h3>
+          <div class="dish-pro__th lang-en">ต้มยำทะเลรวม</div>
+          <p class="dish-pro__desc"><span class="lang-en">Mixed prawns, squid and fish in classic spicy-sour broth. The dish reviewers come back for.</span><span class="lang-th">กุ้ง ปลาหมึก ปลา ในน้ำต้มยำเปรี้ยวเผ็ดสูตรคลาสสิก เมนูที่คนรีวิวกลับมาสั่งซ้ำ</span></p>
+          <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>350–550</span><span class="chili-pro">🌶 <span data-th="เผ็ด">spicy</span></span></div>
         </div>
       </a>
 
       <a class="dish-pro reveal reveal--delay-1" href="menu.html#fresh-seafood">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">02</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">02</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-mussels"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Fresh Seafood</div>
-          <h3 class="dish-pro__name">Steamed Mussels</h3>
-          <div class="dish-pro__th">หอยแมลงภู่นึ่ง</div>
-          <p class="dish-pro__desc">A bowl bigger than your head. Lemongrass-perfumed, seafood dipping sauce on the side.</p>
+          <div class="dish-pro__cat"><span class="lang-en">Fresh Seafood</span><span class="lang-th">อาหารทะเลสด</span></div>
+          <h3 class="dish-pro__name" data-th="หอยแมลงภู่นึ่ง">Steamed Mussels</h3>
+          <div class="dish-pro__th lang-en">หอยแมลงภู่นึ่ง</div>
+          <p class="dish-pro__desc"><span class="lang-en">A bowl bigger than your head. Lemongrass-perfumed, seafood dipping sauce on the side.</span><span class="lang-th">ชามใหญ่กว่าหัว หอมตะไคร้ พร้อมน้ำจิ้มซีฟู้ดแยกข้าง</span></p>
           <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>200–350</span></div>
         </div>
       </a>
@@ -263,29 +284,29 @@
       <a class="dish-pro reveal reveal--delay-2" href="menu.html#fresh-seafood">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">03</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">03</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-crab"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Fresh Seafood</div>
-          <h3 class="dish-pro__name">Steamed Blue Crab</h3>
-          <div class="dish-pro__th">ปูนึ่ง</div>
-          <p class="dish-pro__desc">Whole crab steamed simply, chili-lime dipping sauce. Tastes like the sea.</p>
-          <div class="dish-pro__foot"><span class="price"><small>Market</small></span></div>
+          <div class="dish-pro__cat"><span class="lang-en">Fresh Seafood</span><span class="lang-th">อาหารทะเลสด</span></div>
+          <h3 class="dish-pro__name" data-th="ปูนึ่ง">Steamed Blue Crab</h3>
+          <div class="dish-pro__th lang-en">ปูนึ่ง</div>
+          <p class="dish-pro__desc"><span class="lang-en">Whole crab steamed simply, chili-lime dipping sauce. Tastes like the sea.</span><span class="lang-th">ปูตัวเต็มนึ่งแบบบ้านๆ น้ำจิ้มพริกมะนาว รสชาติเหมือนทะเล</span></p>
+          <div class="dish-pro__foot"><span class="price"><small data-th="ราคาตลาด">Market</small></span></div>
         </div>
       </a>
 
       <a class="dish-pro reveal" href="menu.html#fresh-seafood">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">04</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">04</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-fish"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Fresh Seafood</div>
-          <h3 class="dish-pro__name">Deep-Fried Fish, 3 Sauces</h3>
-          <div class="dish-pro__th">ปลาทอด สามรส</div>
-          <p class="dish-pro__desc">Whole sea bass, fried crisp. Three sauce options — the most-photographed dish.</p>
+          <div class="dish-pro__cat"><span class="lang-en">Fresh Seafood</span><span class="lang-th">อาหารทะเลสด</span></div>
+          <h3 class="dish-pro__name" data-th="ปลาทอดสามรส">Deep-Fried Fish, 3 Sauces</h3>
+          <div class="dish-pro__th lang-en">ปลาทอด สามรส</div>
+          <p class="dish-pro__desc"><span class="lang-en">Whole sea bass, fried crisp. Three sauce options — the most-photographed dish.</span><span class="lang-th">ปลากะพงทอดกรอบทั้งตัว เลือกซอสสามแบบ — เมนูที่ถูกถ่ายมากที่สุด</span></p>
           <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>550–850</span></div>
         </div>
       </a>
@@ -293,14 +314,14 @@
       <a class="dish-pro reveal reveal--delay-1" href="menu.html#curries">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">05</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">05</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-curry"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Curries</div>
-          <h3 class="dish-pro__name">Spicy Shrimp Curry</h3>
-          <div class="dish-pro__th">ฉู่ฉี่กุ้ง</div>
-          <p class="dish-pro__desc">Rich coconut curry, big prawns, kaffir lime. Called out by name in Google's overview.</p>
+          <div class="dish-pro__cat"><span class="lang-en">Curries</span><span class="lang-th">แกง</span></div>
+          <h3 class="dish-pro__name" data-th="ฉู่ฉี่กุ้ง">Spicy Shrimp Curry</h3>
+          <div class="dish-pro__th lang-en">ฉู่ฉี่กุ้ง</div>
+          <p class="dish-pro__desc"><span class="lang-en">Rich coconut curry, big prawns, kaffir lime. Called out by name in Google's overview.</span><span class="lang-th">แกงกะทิรสเข้มข้น กุ้งตัวใหญ่ ใบมะกรูด Google ระบุชื่อเมนูนี้โดยตรง</span></p>
           <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>320–450</span><span class="chili-pro">🌶🌶</span></div>
         </div>
       </a>
@@ -308,14 +329,14 @@
       <a class="dish-pro reveal reveal--delay-2" href="menu.html#southern-thai">
         <div class="dish-pro__corner tl"></div><div class="dish-pro__corner tr"></div>
         <div class="dish-pro__corner bl"></div><div class="dish-pro__corner br"></div>
-        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">06</span></div>
-        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__no"><span class="lbl" data-th="ซิกเนเจอร์">Signature</span><span class="num">06</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span data-th="ของขึ้นชื่อ">House</span></div>
         <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-khaoyum"/></svg></div>
         <div class="dish-pro__body">
-          <div class="dish-pro__cat">Southern Thai</div>
-          <h3 class="dish-pro__name">Khao Yum</h3>
-          <div class="dish-pro__th">ข้าวยำ</div>
-          <p class="dish-pro__desc">Rice salad — pomelo, dried shrimp, herbs, lime, budu. Tastes like nowhere else on earth.</p>
+          <div class="dish-pro__cat"><span class="lang-en">Southern Thai</span><span class="lang-th">อาหารใต้</span></div>
+          <h3 class="dish-pro__name" data-th="ข้าวยำ">Khao Yum</h3>
+          <div class="dish-pro__th lang-en">ข้าวยำ</div>
+          <p class="dish-pro__desc"><span class="lang-en">Rice salad — pomelo, dried shrimp, herbs, lime, budu. Tastes like nowhere else on earth.</span><span class="lang-th">ข้าวยำ — ส้มโอ กุ้งแห้ง สมุนไพร มะนาว น้ำบูดู รสชาติไม่เหมือนที่ไหน</span></p>
           <div class="dish-pro__foot"><span class="price"><span class="currency">฿</span>120–180</span></div>
         </div>
       </a>
@@ -323,7 +344,7 @@
 
     <div style="margin-top: 60px; text-align: center;" class="reveal">
       <a class="btn btn--brass" data-magnet href="menu.html">
-        Browse the full menu — 29 dishes
+        <span data-th="ดูเมนูทั้งหมด — 29 เมนู">Browse the full menu — 29 dishes</span>
         <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -333,21 +354,21 @@
 <!-- ===== Marquee of praise ===== -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee__track">
-    <div class="marquee__item">Tom yum done right <span class="star">✦</span></div>
-    <div class="marquee__item">Sunset is unreal <span class="star">✦</span></div>
-    <div class="marquee__item">Crab tastes like the sea <span class="star">✦</span></div>
-    <div class="marquee__item">Worth the tuk-tuk <span class="star">✦</span></div>
-    <div class="marquee__item">A bowl bigger than my head <span class="star">✦</span></div>
-    <div class="marquee__item">Better than anything on the strip <span class="star">✦</span></div>
-    <div class="marquee__item">Karsts on the horizon <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Tom yum done right</span><span class="lang-th">ต้มยำรสจัดจ้าน</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Sunset is unreal</span><span class="lang-th">พระอาทิตย์ตกสวยเหลือเชื่อ</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Crab tastes like the sea</span><span class="lang-th">ปูสดจากทะเล</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Worth the tuk-tuk</span><span class="lang-th">คุ้มกับการนั่งตุ๊กตุ๊ก</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">A bowl bigger than my head</span><span class="lang-th">ชามใหญ่กว่าหัว</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Better than anything on the strip</span><span class="lang-th">ดีกว่าร้านในย่านท่องเที่ยว</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Karsts on the horizon</span><span class="lang-th">เขาหินปูนปลายขอบฟ้า</span> <span class="star">✦</span></div>
     <!-- duplicate for seamless loop -->
-    <div class="marquee__item">Tom yum done right <span class="star">✦</span></div>
-    <div class="marquee__item">Sunset is unreal <span class="star">✦</span></div>
-    <div class="marquee__item">Crab tastes like the sea <span class="star">✦</span></div>
-    <div class="marquee__item">Worth the tuk-tuk <span class="star">✦</span></div>
-    <div class="marquee__item">A bowl bigger than my head <span class="star">✦</span></div>
-    <div class="marquee__item">Better than anything on the strip <span class="star">✦</span></div>
-    <div class="marquee__item">Karsts on the horizon <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Tom yum done right</span><span class="lang-th">ต้มยำรสจัดจ้าน</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Sunset is unreal</span><span class="lang-th">พระอาทิตย์ตกสวยเหลือเชื่อ</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Crab tastes like the sea</span><span class="lang-th">ปูสดจากทะเล</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Worth the tuk-tuk</span><span class="lang-th">คุ้มกับการนั่งตุ๊กตุ๊ก</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">A bowl bigger than my head</span><span class="lang-th">ชามใหญ่กว่าหัว</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Better than anything on the strip</span><span class="lang-th">ดีกว่าร้านในย่านท่องเที่ยว</span> <span class="star">✦</span></div>
+    <div class="marquee__item"><span class="lang-en">Karsts on the horizon</span><span class="lang-th">เขาหินปูนปลายขอบฟ้า</span> <span class="star">✦</span></div>
   </div>
 </div>
 
@@ -355,9 +376,12 @@
 <section class="section" style="background: var(--paper-2);">
   <div class="container">
     <div class="editorial-quote reveal">
-      <div class="editorial-quote__no">No. 03 — Word of Mouth · ปากต่อปาก</div>
-      <p class="editorial-quote__text">"The sunset view is <em>half</em> the meal.<br>The other half is the <em>tom yum</em>."</p>
-      <div class="editorial-quote__src">★★★★★ · Paraphrased from 3,087 Google reviews</div>
+      <div class="editorial-quote__no"><span class="lang-en">No. 03 — Word of Mouth · ปากต่อปาก</span><span class="lang-th">ฉบับที่ ๐๓ — ปากต่อปาก</span></div>
+      <p class="editorial-quote__text">
+        <span class="lang-en">"The sunset view is <em>half</em> the meal.<br>The other half is the <em>tom yum</em>."</span>
+        <span class="lang-th">"พระอาทิตย์ตกคือ <em>ครึ่ง</em> ของมื้ออาหาร<br>อีกครึ่งคือ <em>ต้มยำ</em>"</span>
+      </p>
+      <div class="editorial-quote__src"><span class="lang-en">★★★★★ · Paraphrased from 3,087 Google reviews</span><span class="lang-th">★★★★★ · สรุปจาก 3,087 รีวิว Google</span></div>
       <div class="flourish" style="margin-top: 40px;">
         <svg style="color:var(--brass);width:100px;"><use href="assets/img/filigree.svg#flourish-1"/></svg>
       </div>
@@ -366,21 +390,21 @@
     <div class="reviews reveal" style="margin-top: 40px;">
       <figure class="review">
         <div class="review__quote-mark">"</div>
-        <blockquote class="review__quote">Worth every minute of the tuk-tuk from Ao Nang. Better than anything on the main strip.</blockquote>
+        <blockquote class="review__quote"><span class="lang-en">Worth every minute of the tuk-tuk from Ao Nang. Better than anything on the main strip.</span><span class="lang-th">คุ้มทุกนาทีของการนั่งตุ๊กตุ๊กมาจากอ่าวนาง ดีกว่าร้านในย่านท่องเที่ยว</span></blockquote>
         <div class="review__stars">★★★★★</div>
-        <figcaption class="review__by">TripAdvisor · paraphrased</figcaption>
+        <figcaption class="review__by"><span class="lang-en">TripAdvisor · paraphrased</span><span class="lang-th">TripAdvisor · สรุปจากรีวิว</span></figcaption>
       </figure>
       <figure class="review">
         <div class="review__quote-mark">"</div>
-        <blockquote class="review__quote">Steamed mussels arrived in a bowl bigger than my head. We ordered two more.</blockquote>
+        <blockquote class="review__quote"><span class="lang-en">Steamed mussels arrived in a bowl bigger than my head. We ordered two more.</span><span class="lang-th">หอยแมลงภู่นึ่งมาในชามใหญ่กว่าหัว สั่งเพิ่มอีกสองชาม</span></blockquote>
         <div class="review__stars">★★★★★</div>
-        <figcaption class="review__by">Google review · paraphrased</figcaption>
+        <figcaption class="review__by"><span class="lang-en">Google review · paraphrased</span><span class="lang-th">Google review · สรุปจากรีวิว</span></figcaption>
       </figure>
       <figure class="review">
         <div class="review__quote-mark">"</div>
-        <blockquote class="review__quote">The crab is super fresh and delicious. We come every time we're in Krabi.</blockquote>
+        <blockquote class="review__quote"><span class="lang-en">The crab is super fresh and delicious. We come every time we're in Krabi.</span><span class="lang-th">ปูสดและอร่อยมาก เรามาทุกครั้งที่ไปกระบี่</span></blockquote>
         <div class="review__stars">★★★★★</div>
-        <figcaption class="review__by">Google review · paraphrased</figcaption>
+        <figcaption class="review__by"><span class="lang-en">Google review · paraphrased</span><span class="lang-th">Google review · สรุปจากรีวิว</span></figcaption>
       </figure>
     </div>
   </div>
@@ -392,16 +416,22 @@
     <div class="cta-panel reveal">
       <div class="cta-panel__inner">
         <div>
-          <h2 class="cta-panel__title">Hold a table for <em>sunset</em>.<br>The best seats fill up by 5:30.</h2>
-          <p class="cta-panel__lead">Open daily 11:00 — 21:30. The tables nearest the waterline are the ones to ask for. Reserve by phone or DM, and we'll save you the one with the view.</p>
+          <h2 class="cta-panel__title">
+            <span class="lang-en">Hold a table for <em>sunset</em>.<br>The best seats fill up by 5:30.</span>
+            <span class="lang-th">จองโต๊ะรับ <em>พระอาทิตย์ตก</em><br>ที่นั่งดีๆ เต็มก่อน 17:30</span>
+          </h2>
+          <p class="cta-panel__lead">
+            <span class="lang-en">Open daily 11:00 — 21:30. The tables nearest the waterline are the ones to ask for. Reserve by phone or DM, and we'll save you the one with the view.</span>
+            <span class="lang-th">เปิดทุกวัน 11:00 — 21:30 น. โต๊ะใกล้ทะเลคือที่นั่งที่ควรขอ จองทางโทรศัพท์หรือ DM แล้วเราจะเก็บโต๊ะวิวสวยให้คุณ</span>
+          </p>
         </div>
         <div class="cta-panel__actions">
           <a class="btn btn--white" data-magnet href="visit.html#reserve">
-            Reserve via Facebook DM
+            <span data-th="จองผ่าน Facebook DM">Reserve via Facebook DM</span>
             <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="cta-panel__call" href="tel:+66815163950">
-            <span class="label">Or call · โทร</span>
+            <span class="label"><span class="lang-en">Or call · โทร</span><span class="lang-th">หรือโทร · Call</span></span>
             <span class="num">081 516 3950</span>
           </a>
         </div>
@@ -418,18 +448,18 @@
         <img class="footer__brand-mark" src="assets/img/logo.svg" alt="">
         <div class="footer__name">Ra Beung Lay Seafood</div>
         <div class="footer__th">ระเบียงเล ซีฟู้ด</div>
-        <p class="footer__tagline">Where the sea meets the table.</p>
+        <p class="footer__tagline"><span class="lang-en">Where the sea meets the table.</span><span class="lang-th">ที่ทะเลพบกับโต๊ะอาหาร</span></p>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h4 data-th="มาเยือน">Visit</h4>
         <ul>
-          <li>10 Moo 5, Sai Thai<br>Mueang Krabi, 81000</li>
+          <li><span class="lang-en">10 Moo 5, Sai Thai<br>Mueang Krabi, 81000</span><span class="lang-th">10 หมู่ 5 ตำบลไสไทย<br>เมืองกระบี่ 81000</span></li>
           <li><a href="tel:+66815163950">081 516 3950</a></li>
-          <li>Daily · 11:00 – 21:30</li>
+          <li><span class="lang-en">Daily · 11:00 – 21:30</span><span class="lang-th">ทุกวัน · 11:00 – 21:30 น.</span></li>
         </ul>
       </div>
       <div>
-        <h4>The site</h4>
+        <h4 data-th="หน้าเว็บไซต์">The site</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
@@ -438,7 +468,7 @@
         </ul>
       </div>
       <div>
-        <h4>Follow</h4>
+        <h4 data-th="ติดตาม">Follow</h4>
         <ul>
           <li><a href="https://www.facebook.com/search/top?q=Ra+Beung+Lay+Seafood+Aqua+Beach">Facebook</a></li>
           <li><a href="https://www.google.com/maps/search/Ra+Beung+Lay+Seafood+Krabi">Google Maps</a></li>
@@ -448,13 +478,13 @@
     </div>
     <div class="footer__bottom">
       <div>© <span data-year>2026</span> Ra Beung Lay Seafood. All rights reserved.</div>
-      <div>Designed for the sea breeze · Built with aloha.</div>
+      <div><span class="lang-en">Designed for the sea breeze · Built with aloha.</span><span class="lang-th">ออกแบบโดยรับลมทะเล · สร้างด้วยอะโลฮ่า</span></div>
     </div>
   </div>
 </footer>
 
 <a class="reserve-float" href="visit.html#reserve">
-  Hold a table
+  <span data-th="จองโต๊ะ">Hold a table</span>
   <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
 

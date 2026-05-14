@@ -75,21 +75,27 @@
     }));
   }
 
-  /* ---------- Language toggle (EN / ไทย) ---------- */
-  const langButtons = document.querySelectorAll('[data-lang]');
+  /* ---------- Language toggle (EN / ไทย) ----------
+     Two mechanisms in tandem:
+     1. data-th attribute → text-content swap (also stores original in data-en
+        on first run, so toggling back restores cleanly)
+     2. .lang-en / .lang-th class pairs → CSS-driven show/hide via html[data-lang]
+  */
+  const langButtons = document.querySelectorAll('.lang-toggle button[data-lang]');
   const setLang = (lang) => {
     document.documentElement.dataset.lang = lang;
-    langButtons.forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
-    document.querySelectorAll('[data-en]').forEach(el => {
-      el.textContent = el.dataset[lang] || el.textContent;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-th]').forEach(el => {
+      if (!el.hasAttribute('data-en')) el.setAttribute('data-en', el.textContent.trim());
+      el.textContent = el.getAttribute(lang === 'th' ? 'data-th' : 'data-en');
     });
+    langButtons.forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
     try { localStorage.setItem('rabeunglay-lang', lang); } catch (_) {}
   };
   langButtons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-  let stored = 'en';
-  try { stored = localStorage.getItem('rabeunglay-lang') || 'en'; } catch (_) {}
-  // Don't actually swap text yet — copy is bilingually visible. Just track toggle state.
-  langButtons.forEach(b => b.classList.toggle('is-active', b.dataset.lang === stored));
+  let savedLang = 'en';
+  try { savedLang = localStorage.getItem('rabeunglay-lang') || 'en'; } catch (_) {}
+  setLang(savedLang);
 
   /* ---------- Scroll reveal ---------- */
   const io = new IntersectionObserver((entries) => {

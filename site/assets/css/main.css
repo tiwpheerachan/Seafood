@@ -1829,3 +1829,28 @@ section { position: relative; }
   .hero__scroll, .hero__meta { display: none; }
   .hero__sun { width: 100px; height: 100px; }
 }
+
+/* ========================================================================
+   LANGUAGE TOGGLE — EN / ไทย
+   .lang-en / .lang-th wrapper pairs show/hide based on html[data-lang]
+   ======================================================================== */
+html[data-lang="en"] .lang-th { display: none !important; }
+html[data-lang="th"] .lang-en { display: none !important; }
+
+/* Apply Thai-specific typography when Thai is active */
+html[data-lang="th"] body { font-family: var(--thai); }
+html[data-lang="th"] h1, html[data-lang="th"] h2, html[data-lang="th"] h3,
+html[data-lang="th"] h4, html[data-lang="th"] h5 {
+  font-family: var(--thai-display);
+  font-weight: 500;
+}
+/* Marcellus / Cormorant don't render Thai well; force Thai display font for swapped headings */
+html[data-lang="th"] .section__title em,
+html[data-lang="th"] .chapter__title em,
+html[data-lang="th"] .menu-intro__title em,
+html[data-lang="th"] .hero__title em,
+html[data-lang="th"] .cta-panel__title em {
+  font-family: var(--thai-display);
+  font-style: normal;
+  color: var(--terracotta);
+}
