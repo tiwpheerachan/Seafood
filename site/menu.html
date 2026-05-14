@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menu — Ra Beung Lay Seafood · เมนู ระเบียงเล ซีฟู้ด</title>
+<meta name="description" content="The full bilingual menu — fresh seafood, tom yum, southern Thai specialties, curries, stir-fries. ระเบียงเล ซีฟู้ด, Aqua Beach, Krabi.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Charm:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img class="nav__brand-mark" src="assets/img/logo.svg" alt="">
+      <span class="nav__brand-text">
+        <span class="nav__brand-th">ระเบียงเล</span>
+        <span class="nav__brand-en">Ra-Beung-Lay</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link is-active" href="menu.html">Menu</a>
+      <a class="nav__link" href="the-beach.html">The Beach</a>
+      <a class="nav__link" href="visit.html">Visit</a>
+    </nav>
+    <div class="nav__cta-wrap" style="display:flex;gap:14px;align-items:center;">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button data-lang="en" class="is-active">EN</button>
+        <button data-lang="th">ไทย</button>
+      </div>
+      <a class="nav__cta" data-magnet href="visit.html#reserve">
+        Hold a table
+        <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Home <span class="th">หน้าแรก</span></a>
+    <a href="menu.html">Menu <span class="th">เมนู</span></a>
+    <a href="the-beach.html">The Beach <span class="th">ชายหาด</span></a>
+    <a href="visit.html">Visit <span class="th">มาเยือน</span></a>
+  </div>
+</header>
+
+<!-- ===== Editorial Menu Intro ===== -->
+<section class="menu-intro">
+  <div class="container">
+    <div class="menu-intro__no reveal">No. 01 — The Menu · เมนูฉบับสมบูรณ์</div>
+    <h1 class="menu-intro__title reveal">
+      <span style="display:block;">A <em>love letter</em></span>
+      <span style="display:block;font-style:italic;">to southern Thai cooking.</span>
+    </h1>
+    <div class="menu-intro__th reveal reveal--delay-1">เมนูที่หลงรักภาคใต้</div>
+
+    <div class="flourish reveal reveal--delay-2" style="margin-top:36px;">
+      <svg style="color:var(--brass);"><use href="assets/img/filigree.svg#flourish-lotus"/></svg>
+    </div>
+
+    <p class="menu-intro__lead reveal reveal--delay-2">
+      Seven signature dishes confirmed across three thousand reviews. Twenty-two more we'd quietly recommend. Order more than you should. <span style="color:var(--terracotta);font-family:var(--thai-display);">สั่งเยอะกว่าที่คิด — นั่นแหละความสนุก.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===== Spec strip ===== -->
+<section style="background: var(--paper);">
+  <div class="container">
+    <div class="spec reveal">
+      <div class="spec__cell">
+        <div class="spec__no">29</div>
+        <div class="spec__lbl">Dishes</div>
+      </div>
+      <div class="spec__cell">
+        <div class="spec__no">07</div>
+        <div class="spec__lbl">Signatures</div>
+      </div>
+      <div class="spec__cell">
+        <div class="spec__no">06</div>
+        <div class="spec__lbl">Chapters</div>
+      </div>
+      <div class="spec__cell">
+        <div class="spec__no">฿฿</div>
+        <div class="spec__lbl">Per person ฿600–1,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Sticky category nav ===== -->
+<nav class="menu-nav" aria-label="Menu categories">
+  <div class="menu-nav__inner">
+    <a class="menu-nav__btn is-active" href="#fresh-seafood"><span class="num">01</span>Fresh Seafood · ทะเลสด</a>
+    <a class="menu-nav__btn" href="#tom-yum-and-soups"><span class="num">02</span>Tom Yum & Soups</a>
+    <a class="menu-nav__btn" href="#stir-fries"><span class="num">03</span>Stir-Fries · ผัด</a>
+    <a class="menu-nav__btn" href="#curries"><span class="num">04</span>Curries · แกง</a>
+    <a class="menu-nav__btn" href="#southern-thai"><span class="num">05</span>Southern Thai · ใต้</a>
+    <a class="menu-nav__btn" href="#rice-and-sides"><span class="num">06</span>Rice & Sides</a>
+    <a class="menu-nav__btn" href="#beverages"><span class="num">07</span>Beverages · เครื่องดื่ม</a>
+  </div>
+</nav>
+
+<!-- ===== Signature Selection Feature Row ===== -->
+<section class="section" style="background: var(--paper); padding-top:80px;">
+  <div class="container">
+    <div class="section__head reveal" style="text-align:center; margin-inline:auto;">
+      <div class="idx idx--solo" style="justify-content:center;">Curator's Selection</div>
+      <h2 class="section__title" style="margin-top:18px;">
+        The <em>seven</em> they order without looking.
+        <span class="th">เจ็ดเมนูที่ลูกค้าประจำสั่งไม่ต้องดูเมนู</span>
+      </h2>
+    </div>
+
+    <div class="feature-row">
+      <article class="dish-pro reveal">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">01</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-tomyum"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Tom Yum & Soups · ต้มยำ</div>
+          <h3 class="dish-pro__name">Seafood Tom Yum</h3>
+          <div class="dish-pro__th">ต้มยำทะเลรวม</div>
+          <p class="dish-pro__desc">Mixed prawns, squid and fish in classic spicy-sour broth. The dish reviewers come back for.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><span class="currency">฿</span>350–550</span>
+            <span class="chili-pro">🌶 spicy</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-pro reveal reveal--delay-1">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">02</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-mussels"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Fresh Seafood · ทะเลสด</div>
+          <h3 class="dish-pro__name">Steamed Mussels</h3>
+          <div class="dish-pro__th">หอยแมลงภู่นึ่ง</div>
+          <p class="dish-pro__desc">A bowl bigger than your head. Lemongrass-perfumed, with seafood dipping sauce on the side.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><span class="currency">฿</span>200–350</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-pro reveal reveal--delay-2">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">03</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-crab"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Fresh Seafood · ทะเลสด</div>
+          <h3 class="dish-pro__name">Steamed Blue Crab</h3>
+          <div class="dish-pro__th">ปูนึ่ง</div>
+          <p class="dish-pro__desc">Whole crab steamed simply, served with chili-lime dipping sauce. Tastes like the sea.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><small>Market</small></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-pro reveal">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">04</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-fish"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Fresh Seafood · ทะเลสด</div>
+          <h3 class="dish-pro__name">Deep-Fried Fish, 3 Sauces</h3>
+          <div class="dish-pro__th">ปลาทอด สามรส</div>
+          <p class="dish-pro__desc">Whole sea bass, fried crisp. Choose three-flavor, tamarind, or garlic — the most-photographed dish on the table.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><span class="currency">฿</span>550–850</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-pro reveal reveal--delay-1">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">05</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-curry"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Curries · แกง</div>
+          <h3 class="dish-pro__name">Spicy Shrimp Curry</h3>
+          <div class="dish-pro__th">ฉู่ฉี่กุ้ง</div>
+          <p class="dish-pro__desc">Rich coconut curry, big prawns, kaffir lime. Called out by name in Google's restaurant overview.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><span class="currency">฿</span>320–450</span>
+            <span class="chili-pro">🌶🌶 medium</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-pro reveal reveal--delay-2">
+        <div class="dish-pro__corner tl"></div>
+        <div class="dish-pro__corner tr"></div>
+        <div class="dish-pro__corner bl"></div>
+        <div class="dish-pro__corner br"></div>
+        <div class="dish-pro__no"><span class="lbl">Signature</span><span class="num">06</span></div>
+        <div class="dish-pro__sig"><span class="star">✦</span><span>House</span></div>
+        <div class="dish-pro__art"><svg viewBox="0 0 400 300"><use href="assets/img/dishes.svg#dish-khaoyum"/></svg></div>
+        <div class="dish-pro__body">
+          <div class="dish-pro__cat">Southern Thai · ใต้</div>
+          <h3 class="dish-pro__name">Khao Yum</h3>
+          <div class="dish-pro__th">ข้าวยำ</div>
+          <p class="dish-pro__desc">Southern rice salad — pomelo, dried shrimp, herbs, lime, budu sauce. Tastes like nowhere else on earth.</p>
+          <div class="dish-pro__foot">
+            <span class="price"><span class="currency">฿</span>120–180</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="flourish reveal" style="margin: 60px auto 0; max-width: 720px;">
+      <svg style="color:var(--brass);width:80px;"><use href="assets/img/filigree.svg#flourish-1"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 01 · Fresh Seafood ============================ -->
+<section class="chapter" id="fresh-seafood">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">01</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title"><em>Fresh</em> Seafood</h2>
+        <div class="chapter__title-th">อาหารทะเลสด</div>
+      </div>
+      <p class="chapter__desc">The heart of the menu. Boats land at Ao Nam Mao in the morning — by midday it's on the table.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-fish"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Deep-Fried Fish, Three-Flavor</span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">ปลาทอดสามรส</span>
+          </div>
+          <p class="entry__hint">Whole fried fish (typically sea bass). The most-photographed dish in our reviews.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>550–850</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-fish"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Fried Sea Bass — Garlic / Tamarind / 3-Flavor</span>
+            <span class="entry__th">ปลากะพงทอด</span>
+          </div>
+          <p class="entry__hint">Whole sea bass, three sauce options. Pick one, or one of each.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>650–950</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-mussel"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Steamed Mussels</span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">หอยแมลงภู่นึ่ง</span>
+          </div>
+          <p class="entry__hint">A bowl bigger than your head, with seafood dipping sauce.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>200–350</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-crab"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Steamed Blue Crab</span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">ปูนึ่ง</span>
+          </div>
+          <p class="entry__hint">Whole steamed crab. Reviewers note the freshness as the standout.</p>
+        </div>
+        <div class="entry__price"><small>Market</small></div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-squid"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Stir-Fried Squid, Salted Egg</span>
+            <span class="entry__th">ปลาหมึกผัดไข่เค็ม</span>
+          </div>
+          <p class="entry__hint">Modern Thai classic. Photogenic and easy to share.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>280–380</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-shrimp"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Grilled Tiger Prawns</span>
+            <span class="entry__th">กุ้งย่าง / กุ้งเผา</span>
+          </div>
+          <p class="entry__hint">Whole grilled prawns. Seafood dipping sauce and lime.</p>
+        </div>
+        <div class="entry__price"><small>Market</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 02 · Tom Yum & Soups ============================ -->
+<section class="chapter" id="tom-yum-and-soups">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">02</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title">Tom Yum & <em>Soups</em></h2>
+        <div class="chapter__title-th">ต้มยำและซุป</div>
+      </div>
+      <p class="chapter__desc">Hot, sour, fragrant. Order one for the table to share.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-tomyum"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Seafood Tom Yum <span class="chili-pro">🌶</span></span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">ต้มยำทะเลรวม</span>
+          </div>
+          <p class="entry__hint">Mixed seafood — prawns, squid, fish — in classic spicy-sour broth.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>350–550</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-tomyum"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Tom Yum Goong <span class="chili-pro">🌶</span></span>
+            <span class="entry__th">ต้มยำกุ้ง</span>
+          </div>
+          <p class="entry__hint">The classic. Large river prawns or sea prawns.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>280–450</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-tomkha"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Tom Kha Gai</span>
+            <span class="entry__th">ต้มข่าไก่</span>
+          </div>
+          <p class="entry__hint">Coconut chicken soup. A milder option for non-spicy diners.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>220–280</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 03 · Stir-Fries ============================ -->
+<section class="chapter" id="stir-fries">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">03</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title"><em>Stir-</em>Fries</h2>
+        <div class="chapter__title-th">เมนูผัด</div>
+      </div>
+      <p class="chapter__desc">Fast, fragrant, hot from the wok.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-shrimp"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Stir-Fried Shrimp, Garlic</span>
+            <span class="entry__th">กุ้งผัดกระเทียม</span>
+          </div>
+          <p class="entry__hint">Garlic-forward, simple, perfect with steamed rice.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>320–450</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-squid"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Stir-Fried Squid, Soy</span>
+            <span class="entry__th">ปลาหมึกผัดซีอิ๊ว</span>
+          </div>
+          <p class="entry__hint">Sweet-savory combo, that elusive wok hei flavor.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>280–380</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-padthai"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Pad Thai Goong</span>
+            <span class="entry__th">ผัดไทยกุ้งสด</span>
+          </div>
+          <p class="entry__hint">The classic done with whole prawns. Tourist-friendly default.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>180–280</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-pakboong"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Stir-Fried Morning Glory <span class="chili-pro">🌶</span></span>
+            <span class="entry__th">ผัดผักบุ้งไฟแดง</span>
+          </div>
+          <p class="entry__hint">Garlicky, fast-fired. The side dish that ties a Thai meal together.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>120–180</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 04 · Curries ============================ -->
+<section class="chapter" id="curries">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">04</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title"><em>Curries</em></h2>
+        <div class="chapter__title-th">แกง</div>
+      </div>
+      <p class="chapter__desc">Slow, deep, generous. Bring rice. ค่อยๆ เคี่ยว · ทานคู่ข้าวสวย.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-curry"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Spicy Shrimp Curry <span class="chili-pro">🌶🌶</span></span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">ฉู่ฉี่กุ้ง</span>
+          </div>
+          <p class="entry__hint">Called out by Google's AI overview. Rich coconut curry, big prawns.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>320–450</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-massaman"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Massaman Curry</span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">แกงมัสมั่น</span>
+          </div>
+          <p class="entry__hint">Southern Thai specialty. Chicken, beef, or lamb, slow-cooked with peanut and cardamom.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>280–380</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-crab"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Yellow Curry, Crab</span>
+            <span class="entry__th">ปูผัดผงกะหรี่</span>
+          </div>
+          <p class="entry__hint">Crab in fragrant yellow curry powder. Order with sticky rice.</p>
+        </div>
+        <div class="entry__price"><small>Market</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 05 · Southern Thai ============================ -->
+<section class="chapter" id="southern-thai">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">05</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title">Southern Thai <em>Specialties</em></h2>
+        <div class="chapter__title-th">อาหารใต้</div>
+      </div>
+      <p class="chapter__desc">What this region is actually known for. Spicier, more pungent, more daring.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-khaoyum"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Khao Yum (Rice Salad)</span>
+            <span class="entry__sig">Signature</span>
+            <span class="entry__th">ข้าวยำ</span>
+          </div>
+          <p class="entry__hint">Rice salad with herbs, dried shrimp, lime and budu. Tastes like nowhere else.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>120–180</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-sataw"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Sataw Pad Goong <span class="chili-pro">🌶🌶</span></span>
+            <span class="entry__th">สะตอผัดกุ้ง</span>
+          </div>
+          <p class="entry__hint">Iconic stink-bean stir-fry. Adventurous diners love it.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>280–380</div>
+      </article>
+
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-curry"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title">
+            <span class="entry__en">Gaeng Tai Pla <span class="chili-pro">🌶🌶🌶</span></span>
+            <span class="entry__th">แกงไตปลา</span>
+          </div>
+          <p class="entry__hint">Pungent, intense southern fish curry. Order if you want the real thing.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>180–280</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 06 · Rice & Sides ============================ -->
+<section class="chapter" id="rice-and-sides">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">06</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title">Rice & <em>Sides</em></h2>
+        <div class="chapter__title-th">ข้าวและเครื่องเคียง</div>
+      </div>
+      <p class="chapter__desc">The supporting cast. Order at least one rice for every two main dishes.</p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-rice"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Steamed Jasmine Rice</span><span class="entry__th">ข้าวสวย</span></div>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>30–50</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-sticky"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Sticky Rice</span><span class="entry__th">ข้าวเหนียว</span></div>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>30–50</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-rice"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Fried Rice with Crab</span><span class="entry__th">ข้าวผัดปู</span></div>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>180–280</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-rice"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Fried Rice with Shrimp</span><span class="entry__th">ข้าวผัดกุ้ง</span></div>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>150–220</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 07 · Beverages ============================ -->
+<section class="chapter" id="beverages">
+  <div class="container">
+    <div class="chapter__head reveal">
+      <div class="chapter__no">07</div>
+      <div class="chapter__title-wrap">
+        <h2 class="chapter__title"><em>Beverages</em></h2>
+        <div class="chapter__title-th">เครื่องดื่ม</div>
+      </div>
+      <p class="chapter__desc">Cold beer is the move. <em>เบียร์เย็นๆ ดื่มกับลมทะเล.</em></p>
+    </div>
+    <div class="menu-pro-list">
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-beer"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Singha / Chang / Leo Beer</span><span class="entry__th">เบียร์สิงห์ / ช้าง / ลีโอ</span></div>
+          <p class="entry__hint">Served ice-cold in a frosted glass.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>100–160</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-coconut"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Whole Young Coconut</span><span class="entry__th">น้ำมะพร้าวลูก</span></div>
+          <p class="entry__hint">Cracked open at your table.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>80–120</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-tea"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Thai Iced Tea</span><span class="entry__th">ชาเย็น</span></div>
+          <p class="entry__hint">Sweet, milky, the perfect spicy-meal antidote.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>50–80</div>
+      </article>
+      <article class="entry reveal">
+        <span class="entry__icon"><svg viewBox="0 0 56 56"><use href="assets/img/icons.svg#i-lime"/></svg></span>
+        <div class="entry__body">
+          <div class="entry__title"><span class="entry__en">Fresh Lime Soda</span><span class="entry__th">มะนาวโซดา</span></div>
+          <p class="entry__hint">Sharp, refreshing, made with squeezed lime.</p>
+        </div>
+        <div class="entry__price"><span class="b">฿</span>60–90</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Editorial pull-quote ===== -->
+<section class="section section--sand">
+  <div class="container">
+    <div class="editorial-quote reveal">
+      <div class="editorial-quote__no">— A note from the kitchen —</div>
+      <p class="editorial-quote__text">"What's on the menu has been on the menu for years.<br>What's on the table <em>arrived this morning.</em>"</p>
+      <div class="editorial-quote__src">Ra Beung Lay · ระเบียงเล</div>
+      <div class="flourish" style="margin-top: 40px;">
+        <svg style="color:var(--brass);width:80px;"><use href="assets/img/filigree.svg#flourish-1"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reservation panel ===== -->
+<section class="section" style="background: var(--paper);">
+  <div class="container">
+    <div class="cta-panel reveal">
+      <div class="cta-panel__inner">
+        <div>
+          <div class="eyebrow" style="color:var(--sun-1);">Hold a table · จองโต๊ะ</div>
+          <h2 class="cta-panel__title" style="margin-top:20px;">Order more than you <em>should</em>.<br>That's the point.</h2>
+          <p class="cta-panel__lead">A table of four typically orders three to four dishes plus rice — about ฿3,000–4,000 in total. Reserve via Facebook or call us, and tell us if you'd like the sand-side or platform table.</p>
+        </div>
+        <div class="cta-panel__actions">
+          <a class="btn btn--white" data-magnet href="visit.html#reserve">Reserve via Facebook DM
+            <svg class="arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="cta-panel__call" href="tel:+66815163950">
+            <span class="label">Or call · โทร</span>
+            <span class="num">081 516 3950</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <img class="footer__brand-mark" src="assets/img/logo.svg" alt="">
+        <div class="footer__name">Ra Beung Lay Seafood</div>
+        <div class="footer__th">ระเบียงเล ซีฟู้ด</div>
+        <p class="footer__tagline">Where the sea meets the table.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>10 Moo 5, Sai Thai<br>Mueang Krabi, 81000</li>
+          <li><a href="tel:+66815163950">081 516 3950</a></li>
+          <li>Daily · 11:00 – 21:30</li>
+        </ul>
+      </div>
+      <div>
+        <h4>The site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="the-beach.html">The Beach</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/search/top?q=Ra+Beung+Lay+Seafood+Aqua+Beach">Facebook</a></li>
+          <li><a href="https://www.google.com/maps/search/Ra+Beung+Lay+Seafood+Krabi">Google Maps</a></li>
+          <li><a href="https://www.tripadvisor.com/Search?q=Ra+Beung+Lay+Seafood">TripAdvisor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© <span data-year>2026</span> Ra Beung Lay Seafood.</div>
+      <div>Designed for the sea breeze · Built with aloha.</div>
+    </div>
+  </div>
+</footer>
+
+<a class="reserve-float" href="visit.html#reserve">
+  Hold a table
+  <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6h12M8 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

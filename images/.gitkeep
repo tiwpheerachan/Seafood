@@ -1,0 +1,29 @@
+# This directory holds image assets for the Ra Beung Lay site build.
+# See ../design/image-references.md for sourcing instructions.
+# Recommended structure:
+#
+# images/
+# ├── hero/
+# │   ├── home-sunset.jpg
+# │   ├── beach-page-hero.jpg
+# │   └── visit-page-hero.jpg
+# ├── atmosphere/
+# │   ├── thatched-roof-tables.jpg
+# │   ├── tables-on-sand.jpg
+# │   ├── hammock-by-sea.jpg
+# │   └── ...
+# ├── food/
+# │   ├── seafood-tom-yum.jpg
+# │   ├── steamed-mussels.jpg
+# │   ├── steamed-crab.jpg
+# │   ├── deep-fried-fish.jpg
+# │   ├── spicy-shrimp-curry.jpg
+# │   ├── khao-yum.jpg
+# │   └── massaman-curry.jpg
+# ├── menu-headers/   (small atmospheric shots per category)
+# ├── logo/
+# │   ├── logo-circular.svg
+# │   ├── wordmark.svg
+# │   └── favicon-512.png
+# └── og/
+#     └── og-default.jpg (1200x630, sunset hero)

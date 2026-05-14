@@ -1,0 +1,81 @@
+{
+  "name_en": "Ra Beung Lay Seafood",
+  "name_full_en": "Ra Beung Lay Seafood Restaurant",
+  "name_th": "ระเบียงเล ซีฟู้ด",
+  "name_full_th": "ร้านอาหารระเบียงเล ซีฟู้ด",
+  "name_meaning": "ระเบียงเล literally means 'sea veranda' or 'sea balcony' — the name describes the restaurant's beachfront veranda setting",
+  "tagline_options": [
+    "Seafood by the sea.",
+    "ระเบียงเล — where the sea meets the table.",
+    "Family-run. Beachfront. Since {YEAR}."
+  ],
+  "tagline_note": "All taglines are demo proposals — verify founding year and approve final tagline with owner before launch.",
+  "category": "Thai seafood restaurant",
+  "subcategory": "Beachfront family-run, sit-down dining",
+  "city": "Krabi",
+  "neighborhood": "Aqua Beach (Hat Aqua) / Ao Nam Mao Beach area, near Ao Nang",
+  "country": "Thailand",
+  "is_chain": false,
+  "location_count": 1,
+  "google_rating": 4.8,
+  "google_review_count": 3087,
+  "review_rank_in_lead_pipeline": "#1 by review volume",
+  "social": {
+    "facebook": {
+      "name": "Ra Beung Lay Seafood Restaurant Aqua Beach",
+      "url_search": "https://www.facebook.com/search/top?q=Ra+Beung+Lay+Seafood+Aqua+Beach",
+      "note": "Verify exact page URL before launch — Facebook search redirects vary"
+    },
+    "instagram": {
+      "url_search": "https://www.instagram.com/explore/tags/rabeunglayseafood/",
+      "note": "Customer-generated content via hashtag; no confirmed official account"
+    },
+    "tiktok": {
+      "url_search": "https://www.tiktok.com/search?q=ra%20beung%20lay",
+      "note": "Heavy customer-generated content; reels of the sunset and food"
+    },
+    "google_business": "https://www.google.com/maps/search/Ra+Beung+Lay+Seafood+Krabi",
+    "tripadvisor_search": "https://www.tripadvisor.com/Search?q=Ra+Beung+Lay+Seafood",
+    "wongnai_search": "https://www.wongnai.com/search?keyword=Ra+Beung+Lay"
+  },
+  "delivery_partners": {
+    "available": false,
+    "note": "Sit-down beachfront restaurant — delivery is not on-brand and not currently offered. Do NOT add LineMan/Grab buttons."
+  },
+  "reservation": {
+    "primary_channel": "Facebook DM",
+    "phone": "+66 81 516 3950",
+    "third_party_listings": ["AutoReserve", "Hungry Hub (search)", "TripAdvisor"]
+  },
+  "price_tier": "Moderate (premium for Krabi)",
+  "price_range_thb": {
+    "per_person_typical": "600-1000",
+    "meal_for_4_typical": "3000-4000",
+    "note": "Customers describe pricing as 'reasonable to moderate.' A meal for 4 is approximately 3,700 baht per Google knowledge panel."
+  },
+  "primary_audience": [
+    "International tourists in Ao Nang / Krabi (#1 by volume)",
+    "Thai families on holiday weekends",
+    "Hotel guests at nearby Aqua Beach / Ao Nang resorts",
+    "Day-trippers from Krabi Town",
+    "Tour groups (lunch service)"
+  ],
+  "brand_personality": {
+    "primary_traits": ["Warm", "Generous", "Coastal", "Family-run", "Authentic"],
+    "avoid": ["Premium", "Minimalist", "Corporate", "Trendy", "Cool urban"]
+  },
+  "logo_description": "Circular emblem in terracotta orange. Thai script 'ระเบียงเล' top-curved, English 'Ra-Beung-Lay Seafood' bottom-curved. Decorative wave element in the center evoking the sea. Often appears on signage with the wordmark spelled out.",
+  "data_provenance": {
+    "scraped_on": "2026-05-11",
+    "sources": [
+      "Google Search knowledge panel",
+      "Google Image Search results",
+      "TripAdvisor listing",
+      "Wongnai listing",
+      "Trip.com listing",
+      "AutoReserve listing"
+    ],
+    "verification_required": true,
+    "verify_before_launch": ["exact address", "founding year", "phone numbers", "menu prices", "wine/alcohol availability"]
+  }
+}

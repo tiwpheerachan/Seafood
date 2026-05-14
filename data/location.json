@@ -1,0 +1,65 @@
+{
+  "id": "krabi-aqua-beach",
+  "name_en": "Ra Beung Lay Seafood Restaurant",
+  "name_th": "ร้านอาหารระเบียงเล ซีฟู้ด",
+  "is_only_location": true,
+  "address": {
+    "line1": "10 Moo 5",
+    "line2": "Aqua Beach (Hat Aqua) / Ao Nam Mao Beach area",
+    "subdistrict": "Sai Thai (per Google) / Ao Nang (per Facebook)",
+    "district": "Mueang Krabi District",
+    "province": "Krabi",
+    "postal_code": "81000",
+    "country": "Thailand",
+    "full": "10 Moo 5, Sai Thai, Mueang Krabi District, Krabi 81000, Thailand",
+    "verification_note": "Sources disagree on subdistrict — verify with owner. Both 'Sai Thai' (Google) and 'Ao Nang' (Facebook) appear in listings. The restaurant is located on the stretch of beach between Ao Nang and Ao Nam Mao, accessible from both."
+  },
+  "phone": "+66 81 516 3950",
+  "phone_display": "081 516 3950",
+  "phone_intl_link": "tel:+66815163950",
+  "hours": {
+    "monday": "11:00 AM - 9:30 PM",
+    "tuesday": "11:00 AM - 9:30 PM",
+    "wednesday": "11:00 AM - 9:30 PM",
+    "thursday": "11:00 AM - 9:30 PM",
+    "friday": "11:00 AM - 9:30 PM",
+    "saturday": "11:00 AM - 9:30 PM",
+    "sunday": "11:00 AM - 9:30 PM",
+    "note": "11.00น-21.30น per Google. Verify with owner — beachfront restaurants sometimes close earlier in monsoon (May-Oct)."
+  },
+  "google_rating": 4.8,
+  "google_review_count": 3087,
+  "map_embed_query": "Ra Beung Lay Seafood Restaurant Aqua Beach Krabi",
+  "best_for": [
+    "Sunset dinner (the view is the sell)",
+    "Long lunches with family",
+    "Pre/post Railay Beach day trips",
+    "Tour group meals",
+    "Tourists wanting an 'authentic' Thai seafood experience without going off-grid"
+  ],
+  "atmosphere": {
+    "setting": "Open-air, beachfront, partly under bamboo and thatched roof structures",
+    "seating_styles": [
+      "Long communal wooden tables under thatched roof",
+      "Low Thai-style mats on raised wood platforms",
+      "Tables right on the sand with sea view",
+      "Bamboo bench seating with cushions"
+    ],
+    "view": "Direct ocean view with Krabi karst formations in the distance",
+    "best_seat": "Tables nearest the waterline at sunset"
+  },
+  "travel_info": {
+    "from_ao_nang": "10-15 min by tuk-tuk or taxi",
+    "from_krabi_town": "20-25 min by car",
+    "from_krabi_airport_kbv": "30-35 min by taxi",
+    "from_railay_beach": "Boat to Ao Nam Mao pier + 5 min walk",
+    "parking": "On-site parking available — verify capacity with owner",
+    "accessibility_note": "Sand-floor seating; not all tables wheelchair-accessible. The thatched-roof platform tables are the most accessible option."
+  },
+  "implementation_notes": {
+    "map_embed_pattern": "https://www.google.com/maps?q=Ra+Beung+Lay+Seafood+Krabi&output=embed",
+    "directions_link_pattern": "https://www.google.com/maps/dir/?api=1&destination=Ra+Beung+Lay+Seafood+Krabi",
+    "click_to_call": "Use `tel:+66815163950`",
+    "schema_recommendation": "Add schema.org Restaurant JSON-LD with full address, phone, openingHours, priceRange, servesCuisine: 'Thai, Seafood', acceptsReservations: true"
+  }
+}

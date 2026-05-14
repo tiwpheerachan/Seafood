@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="karstGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3D3460" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1F2C45" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="karstFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5E4B72" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#2C3854" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <!-- Far layer -->
+  <path d="M0 220 L0 130 L60 110 L100 130 L160 90 L220 120 L270 100 L320 130 L380 90 L450 130 L520 110 L580 140 L640 110 L720 130 L800 105 L860 135 L940 110 L1010 140 L1080 115 L1160 135 L1240 105 L1310 130 L1400 110 L1480 130 L1550 115 L1600 130 L1600 220 Z" fill="url(#karstFar)"/>
+  <!-- Near layer with karst spikes -->
+  <path d="M0 220 L0 180
+    L40 175 L70 130 L100 175
+    L160 175 L190 90 L220 175
+    L260 175 L290 110 L330 175
+    L380 175 L410 60 L460 175
+    L520 175 L560 130 L600 175
+    L660 175 L700 85 L750 175
+    L820 175 L860 120 L920 175
+    L980 175 L1010 100 L1060 175
+    L1130 175 L1170 70 L1220 175
+    L1300 175 L1340 140 L1390 175
+    L1450 175 L1500 110 L1560 175
+    L1600 175 L1600 220 Z" fill="url(#karstGrad)"/>
+  <!-- Tiny boat -->
+  <g transform="translate(1100 180)" fill="#3D3460" opacity="0.85">
+    <path d="M0 0 L20 0 L18 5 L2 5 Z"/>
+    <line x1="10" y1="0" x2="10" y2="-12" stroke="#3D3460" stroke-width="1"/>
+    <path d="M10 -12 L18 -2 L10 -2 Z" fill="#5E4B72"/>
+  </g>
+  <!-- Reflections -->
+  <g opacity="0.4">
+    <line x1="190" y1="180" x2="190" y2="200" stroke="#5E4B72" stroke-width="1.5"/>
+    <line x1="410" y1="180" x2="410" y2="205" stroke="#5E4B72" stroke-width="1.5"/>
+    <line x1="700" y1="180" x2="700" y2="200" stroke="#5E4B72" stroke-width="1.5"/>
+    <line x1="1170" y1="180" x2="1170" y2="200" stroke="#5E4B72" stroke-width="1.5"/>
+  </g>
+</svg>

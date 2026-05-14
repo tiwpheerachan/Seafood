@@ -1,0 +1,210 @@
+{
+  "currency": "THB",
+  "verified_source": "Google knowledge panel + AI overview, customer photos on Google Maps and TripAdvisor",
+  "verified_on": "2026-05-11",
+  "verification_required": true,
+  "note": "Most menu items confirmed from public sources but exact prices were not consistently published online. Treat all prices as estimates pending verification with the restaurant. Items marked is_signature are confirmed customer favorites; others are inferred from review mentions and photos.",
+  "bilingual": true,
+  "categories": [
+    {
+      "id": "fresh-seafood",
+      "name_en": "Fresh Seafood",
+      "name_th": "อาหารทะเลสด",
+      "description_en": "The heart of the menu. Fish, shrimp, crab, squid, and mussels — typically caught the same day.",
+      "description_th": "หัวใจของเมนู ปลา กุ้ง ปู ปลาหมึก หอยแมลงภู่ สดใหม่ทุกวัน",
+      "items": [
+        {
+          "name_en": "Deep-Fried Fish with Sweet & Sour Sauce",
+          "name_th": "ปลาทอดราดน้ำซอสมะขาม / น้ำปลามะนาว",
+          "is_signature": true,
+          "price_estimate": "550-850",
+          "description_hint": "Whole fried fish (sea bass typical), choice of sauces. Most-photographed dish in customer reviews."
+        },
+        {
+          "name_en": "Fried Sea Bass with Garlic / Tamarind / Three-Flavor Sauce",
+          "name_th": "ปลากะพงทอดกระเทียม / ซอสมะขาม / สามรส",
+          "price_estimate": "650-950",
+          "description_hint": "Whole sea bass, multiple sauce options. Customer-favorite item across all sauce variants."
+        },
+        {
+          "name_en": "Steamed Mussels",
+          "name_th": "หอยแมลงภู่นึ่ง",
+          "is_signature": true,
+          "price_estimate": "200-350",
+          "description_hint": "Big bowl of steamed New Zealand mussels with seafood dipping sauce. Frequently mentioned in reviews."
+        },
+        {
+          "name_en": "Steamed Crab",
+          "name_th": "ปูนึ่ง",
+          "is_signature": true,
+          "price_estimate": "Market price (typically 600-1500)",
+          "description_hint": "Whole steamed blue crab. Reviewers note freshness as a standout."
+        },
+        {
+          "name_en": "Stir-Fried Squid with Salted Egg",
+          "name_th": "ปลาหมึกผัดไข่เค็ม",
+          "price_estimate": "280-380",
+          "description_hint": "Trendy dish, very Instagrammable. Standard at most Thai seafood spots."
+        },
+        {
+          "name_en": "Grilled Shrimp",
+          "name_th": "กุ้งย่าง / กุ้งเผา",
+          "price_estimate": "Market price (typically 400-900)",
+          "description_hint": "Whole grilled prawns with seafood dipping sauce."
+        }
+      ]
+    },
+    {
+      "id": "tom-yum-and-soups",
+      "name_en": "Tom Yum & Soups",
+      "name_th": "ต้มยำและซุป",
+      "description_en": "Hot, sour, fragrant. Order one for the table.",
+      "description_th": "ร้อน เปรี้ยว หอม สั่งหนึ่งหม้อแชร์กัน",
+      "items": [
+        {
+          "name_en": "Seafood Tom Yum",
+          "name_th": "ต้มยำทะเลรวม",
+          "is_signature": true,
+          "price_estimate": "350-550",
+          "description_hint": "Mixed seafood (prawns, squid, fish) in classic spicy-sour broth. Repeatedly named a signature."
+        },
+        {
+          "name_en": "Tom Yum Goong (Prawn)",
+          "name_th": "ต้มยำกุ้ง",
+          "price_estimate": "280-450",
+          "description_hint": "The classic — large river prawns or sea prawns."
+        },
+        {
+          "name_en": "Tom Kha Gai",
+          "name_th": "ต้มข่าไก่",
+          "price_estimate": "220-280",
+          "description_hint": "Coconut chicken soup — a milder option for non-spicy diners."
+        }
+      ]
+    },
+    {
+      "id": "stir-fries",
+      "name_en": "Stir-Fries",
+      "name_th": "เมนูผัด",
+      "description_en": "Fast, fragrant, hot from the wok.",
+      "description_th": "เร็ว หอม ร้อนจากกระทะ",
+      "items": [
+        {
+          "name_en": "Stir-Fried Shrimp with Garlic",
+          "name_th": "กุ้งผัดกระเทียม",
+          "price_estimate": "320-450",
+          "description_hint": "Customer favorite. Garlic-forward, simple, perfect with rice."
+        },
+        {
+          "name_en": "Stir-Fried Squid with Soy Sauce",
+          "name_th": "ปลาหมึกผัดซีอิ๊ว",
+          "price_estimate": "280-380",
+          "description_hint": "Signature combo flavor."
+        },
+        {
+          "name_en": "Pad Thai Goong",
+          "name_th": "ผัดไทยกุ้งสด",
+          "price_estimate": "180-280",
+          "description_hint": "Classic shrimp pad thai — tourist-friendly default option."
+        },
+        {
+          "name_en": "Stir-Fried Morning Glory",
+          "name_th": "ผัดผักบุ้งไฟแดง",
+          "price_estimate": "120-180",
+          "description_hint": "Side dish staple. Garlicky, fast-fired."
+        }
+      ]
+    },
+    {
+      "id": "curries",
+      "name_en": "Curries",
+      "name_th": "แกง",
+      "description_en": "Slow, deep, generous. Bring rice.",
+      "description_th": "ค่อยๆ เคี่ยว เข้มข้น มากด้วยรสชาติ ทานคู่ข้าวสวย",
+      "items": [
+        {
+          "name_en": "Spicy Shrimp Curry",
+          "name_th": "ฉู่ฉี่กุ้ง / แกงคั่วกุ้ง",
+          "is_signature": true,
+          "price_estimate": "320-450",
+          "description_hint": "Specifically called out in Google AI overview as a signature. Rich coconut curry with prawns."
+        },
+        {
+          "name_en": "Massaman Curry",
+          "name_th": "แกงมัสมั่น",
+          "is_signature": true,
+          "price_estimate": "280-380",
+          "description_hint": "Southern Thai specialty — listed as a signature item. Available with chicken, beef, or lamb."
+        },
+        {
+          "name_en": "Yellow Curry with Crab",
+          "name_th": "ปูผัดผงกะหรี่",
+          "price_estimate": "Market price",
+          "description_hint": "Crab in fragrant yellow curry powder."
+        }
+      ]
+    },
+    {
+      "id": "southern-thai",
+      "name_en": "Southern Thai Specialties",
+      "name_th": "อาหารใต้",
+      "description_en": "What this region is actually known for. Spicier, more pungent, more daring.",
+      "description_th": "อาหารพื้นถิ่นภาคใต้ที่เผ็ดร้อน หอมเข้มข้น และจัดจ้าน",
+      "items": [
+        {
+          "name_en": "Khao Yum (Southern Rice Salad)",
+          "name_th": "ข้าวยำ",
+          "is_signature": true,
+          "price_estimate": "120-180",
+          "description_hint": "Rice salad with herbs, dried shrimp, lime, budu sauce. Specifically listed as a southern Thai signature for this restaurant."
+        },
+        {
+          "name_en": "Sataw Pad Goong (Stink Beans with Shrimp)",
+          "name_th": "สะตอผัดกุ้ง",
+          "price_estimate": "280-380",
+          "description_hint": "Iconic southern Thai stir-fry. Adventurous diners love it."
+        },
+        {
+          "name_en": "Gaeng Tai Pla",
+          "name_th": "แกงไตปลา",
+          "price_estimate": "180-280",
+          "description_hint": "Pungent, intense southern fish-organ curry. Order if you want the real thing."
+        }
+      ]
+    },
+    {
+      "id": "rice-and-sides",
+      "name_en": "Rice & Sides",
+      "name_th": "ข้าวและเครื่องเคียง",
+      "description_en": "",
+      "description_th": "",
+      "items": [
+        { "name_en": "Steamed Jasmine Rice", "name_th": "ข้าวสวย", "price_estimate": "30-50" },
+        { "name_en": "Sticky Rice", "name_th": "ข้าวเหนียว", "price_estimate": "30-50" },
+        { "name_en": "Fried Rice with Crab", "name_th": "ข้าวผัดปู", "price_estimate": "180-280" },
+        { "name_en": "Fried Rice with Shrimp", "name_th": "ข้าวผัดกุ้ง", "price_estimate": "150-220" }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name_en": "Beverages",
+      "name_th": "เครื่องดื่ม",
+      "description_en": "Cold beer is the move.",
+      "description_th": "เบียร์เย็นๆ ดื่มกับลมทะเล",
+      "items": [
+        { "name_en": "Singha / Chang / Leo Beer", "name_th": "เบียร์สิงห์ / ช้าง / ลีโอ", "price_estimate": "100-160" },
+        { "name_en": "Coconut Water (whole)", "name_th": "น้ำมะพร้าว", "price_estimate": "80-120" },
+        { "name_en": "Thai Iced Tea", "name_th": "ชาเย็น", "price_estimate": "50-80" },
+        { "name_en": "Fresh Lime Soda", "name_th": "มะนาวโซดา", "price_estimate": "60-90" },
+        {
+          "name_en": "Wine list",
+          "name_th": "ไวน์",
+          "price_estimate": null,
+          "description_hint": "Verify with owner whether wine is offered. Some Thai seafood beachfront spots have a small wine list; others stick to beer + cocktails."
+        }
+      ]
+    }
+  ],
+  "ordering_advice_for_demo_site": "Build the menu page so the SIGNATURE items (Seafood Tom Yum, Steamed Mussels, Steamed Crab, Spicy Shrimp Curry, Khao Yum, Massaman Curry, Deep-Fried Fish) are visually emphasized — larger image, callout treatment. These are the dishes confirmed by primary sources as customer favorites; they're the safest things to spotlight.",
+  "schema_recommendation": "Use schema.org Menu / MenuSection / MenuItem JSON-LD with bilingual `name` fields where supported."
+}

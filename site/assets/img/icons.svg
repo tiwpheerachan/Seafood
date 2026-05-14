@@ -1,0 +1,280 @@
+<!-- Mini circular dish icons (60x60 round) — for menu list entries -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <!-- Whole fish -->
+  <symbol id="i-fish" viewBox="0 0 56 56">
+    <g transform="translate(28 28)">
+      <path d="M-22 0 Q -18 -10, -2 -10 Q 14 -10, 18 -3 Q 22 0, 18 3 Q 14 10, -2 10 Q -18 10, -22 0 Z" fill="#E89D5C" stroke="#A33D1F" stroke-width="1"/>
+      <path d="M18 0 L 24 -7 L 22 0 L 24 7 Z" fill="#E89D5C" stroke="#A33D1F" stroke-width="1"/>
+      <circle cx="-16" cy="-3" r="1.6" fill="#2A1810"/>
+      <path d="M-4 -7 L 0 -3 L 4 -7" fill="none" stroke="#A33D1F" stroke-width=".8"/>
+    </g>
+  </symbol>
+
+  <!-- Tom Yum bowl -->
+  <symbol id="i-tomyum" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#A33D1F" opacity=".25"/>
+    <path d="M10 28 Q 10 44, 28 44 Q 46 44, 46 28 Z" fill="#3a2418"/>
+    <ellipse cx="28" cy="28" rx="18" ry="3" fill="#C8542B"/>
+    <ellipse cx="28" cy="26" rx="17" ry="2.5" fill="#E97A4A"/>
+    <ellipse cx="20" cy="26" rx="3" ry="1.2" fill="#A33D1F"/>
+    <ellipse cx="35" cy="27" rx="2.5" ry="1" fill="#A33D1F"/>
+    <circle cx="28" cy="26" r="1.6" fill="#A9C36F"/>
+    <!-- steam -->
+    <g stroke="#C9B898" stroke-width="1" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M22 22 Q 24 18, 22 14"/>
+      <path d="M30 20 Q 33 16, 30 12"/>
+    </g>
+  </symbol>
+
+  <!-- Shrimp -->
+  <symbol id="i-shrimp" viewBox="0 0 56 56">
+    <g transform="translate(28 28) rotate(-20)" fill="#F38A4B" stroke="#A33D1F" stroke-width=".8">
+      <path d="M-14 0 Q -6 -10, 8 -7 Q 18 -2, 14 5 Q 4 12, -8 10 Q -16 8, -14 0 Z"/>
+      <path d="M14 -2 L 22 -8" stroke-width=".6" fill="none"/>
+      <path d="M16 1 L 24 -3" stroke-width=".6" fill="none"/>
+      <circle cx="-10" cy="-1" r="1" fill="#2A1810" stroke="none"/>
+    </g>
+  </symbol>
+
+  <!-- Mussel -->
+  <symbol id="i-mussel" viewBox="0 0 56 56">
+    <g transform="translate(28 28) rotate(-10)">
+      <path d="M-20 0 Q -4 -12, 16 -3 Q 8 8, -20 0 Z" fill="#2E5A3D" stroke="#1A3525" stroke-width=".8"/>
+      <path d="M-20 0 Q -4 -9, 16 -3" stroke="#A9C36F" stroke-width="1.4" fill="none"/>
+      <ellipse cx="-4" cy="-2" rx="8" ry="2.5" fill="#E97A4A"/>
+    </g>
+  </symbol>
+
+  <!-- Crab -->
+  <symbol id="i-crab" viewBox="0 0 56 56">
+    <g transform="translate(28 30)">
+      <g stroke="#A33D1F" stroke-width="2" stroke-linecap="round" fill="none">
+        <path d="M-12 -3 Q -19 -8, -22 -2"/>
+        <path d="M-12 2 Q -19 4, -22 8"/>
+        <path d="M12 -3 Q 19 -8, 22 -2"/>
+        <path d="M12 2 Q 19 4, 22 8"/>
+      </g>
+      <ellipse cx="0" cy="0" rx="14" ry="10" fill="#C8542B"/>
+      <ellipse cx="0" cy="-1" rx="12" ry="8" fill="#E07248"/>
+      <circle cx="-3" cy="-6" r="1" fill="#2A1810"/>
+      <circle cx="3" cy="-6" r="1" fill="#2A1810"/>
+      <g transform="translate(-18 -8)" fill="#C8542B" stroke="#A33D1F" stroke-width="0.6">
+        <ellipse rx="5" ry="3"/>
+      </g>
+      <g transform="translate(18 -8)" fill="#C8542B" stroke="#A33D1F" stroke-width="0.6">
+        <ellipse rx="5" ry="3"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- Squid rings -->
+  <symbol id="i-squid" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="18" ry="2" fill="#A33D1F" opacity=".22"/>
+    <ellipse cx="28" cy="32" rx="20" ry="8" fill="#F2C282"/>
+    <g fill="#F9F4E9" stroke="#A6824B" stroke-width="1">
+      <circle cx="22" cy="30" r="4"/>
+      <circle cx="22" cy="30" r="2" fill="#F2C282"/>
+      <circle cx="32" cy="28" r="4"/>
+      <circle cx="32" cy="28" r="2" fill="#F2C282"/>
+      <circle cx="36" cy="35" r="3"/>
+      <circle cx="36" cy="35" r="1.5" fill="#F2C282"/>
+    </g>
+    <circle cx="18" cy="34" r="1" fill="#F5C24A"/>
+    <circle cx="40" cy="32" r="1" fill="#F5C24A"/>
+  </symbol>
+
+  <!-- Soup (steam) -->
+  <symbol id="i-soup" viewBox="0 0 56 56">
+    <path d="M10 30 Q 10 44, 28 44 Q 46 44, 46 30 Z" fill="#3a2418"/>
+    <ellipse cx="28" cy="30" rx="18" ry="3" fill="#F2E9D8"/>
+    <g stroke="#C9B898" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".8">
+      <path d="M20 26 Q 22 20, 18 14"/>
+      <path d="M28 24 Q 31 18, 27 12"/>
+      <path d="M36 26 Q 38 20, 34 14"/>
+    </g>
+  </symbol>
+
+  <!-- Pad Thai noodles -->
+  <symbol id="i-padthai" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="32" rx="22" ry="8" fill="#F2E9D8"/>
+    <g stroke="#E89D5C" stroke-width="1.4" fill="none" stroke-linecap="round">
+      <path d="M10 30 Q 20 24, 30 30 Q 40 36, 46 30"/>
+      <path d="M10 34 Q 22 30, 32 34 Q 42 38, 46 33"/>
+      <path d="M12 28 Q 24 24, 34 28"/>
+    </g>
+    <circle cx="22" cy="32" r="1.4" fill="#D9A062"/>
+    <circle cx="36" cy="34" r="1.4" fill="#D9A062"/>
+  </symbol>
+
+  <!-- Morning glory -->
+  <symbol id="i-pakboong" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#A33D1F" opacity=".15"/>
+    <ellipse cx="28" cy="34" rx="22" ry="7" fill="#F2E9D8"/>
+    <g stroke="#5C7341" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M14 34 Q 22 26, 32 30"/>
+      <path d="M20 38 Q 30 34, 40 36"/>
+    </g>
+    <g fill="#5C7341">
+      <ellipse cx="22" cy="26" rx="3" ry="2"/>
+      <ellipse cx="32" cy="30" rx="3" ry="2"/>
+      <ellipse cx="38" cy="34" rx="3" ry="2"/>
+    </g>
+    <ellipse cx="30" cy="38" rx="3" ry="1" fill="#A33D1F"/>
+  </symbol>
+
+  <!-- Curry pot -->
+  <symbol id="i-curry" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#A33D1F" opacity=".25"/>
+    <path d="M10 28 Q 10 44, 28 44 Q 46 44, 46 28 Z" fill="#3a2418"/>
+    <ellipse cx="28" cy="28" rx="18" ry="3" fill="#1a0e08"/>
+    <ellipse cx="28" cy="26" rx="17" ry="2.5" fill="#C8542B"/>
+    <ellipse cx="22" cy="26" rx="3" ry="1.4" fill="#F38A4B"/>
+    <ellipse cx="34" cy="26" rx="3" ry="1.4" fill="#F38A4B"/>
+    <g stroke="#C9B898" stroke-width="1" fill="none" stroke-linecap="round" opacity=".6">
+      <path d="M24 22 Q 26 18, 24 14"/>
+      <path d="M32 22 Q 34 18, 32 14"/>
+    </g>
+  </symbol>
+
+  <!-- Massaman -->
+  <symbol id="i-massaman" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#7E3A12" opacity=".3"/>
+    <path d="M10 28 Q 10 44, 28 44 Q 46 44, 46 28 Z" fill="#3a2418"/>
+    <ellipse cx="28" cy="28" rx="18" ry="3" fill="#1a0e08"/>
+    <ellipse cx="28" cy="26" rx="17" ry="2.5" fill="#A6552B"/>
+    <ellipse cx="22" cy="25" rx="3" ry="2" fill="#F4D193"/>
+    <ellipse cx="32" cy="26" rx="3" ry="2" fill="#F4D193"/>
+    <circle cx="26" cy="27" r="1.2" fill="#D9A062"/>
+    <circle cx="35" cy="25" r="1.2" fill="#D9A062"/>
+  </symbol>
+
+  <!-- Rice salad -->
+  <symbol id="i-khaoyum" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="34" rx="22" ry="9" fill="#F9F4E9" stroke="#C9B898"/>
+    <circle cx="28" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="20" cy="32" r="2.4" fill="#F8B3C0"/>
+    <circle cx="36" cy="33" r="2.4" fill="#A9C36F"/>
+    <circle cx="22" cy="38" r="2" fill="#E07248"/>
+    <circle cx="36" cy="38" r="2" fill="#A33D1F"/>
+    <circle cx="28" cy="40" r="1.6" fill="#5C7341"/>
+  </symbol>
+
+  <!-- Sataw beans -->
+  <symbol id="i-sataw" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#A33D1F" opacity=".2"/>
+    <ellipse cx="28" cy="34" rx="22" ry="8" fill="#F2E9D8"/>
+    <g fill="#7A8E50" stroke="#3D5024" stroke-width=".6">
+      <ellipse cx="20" cy="30" rx="3" ry="2"/>
+      <ellipse cx="26" cy="32" rx="3" ry="2"/>
+      <ellipse cx="32" cy="30" rx="3" ry="2"/>
+      <ellipse cx="38" cy="32" rx="3" ry="2"/>
+      <ellipse cx="24" cy="36" rx="3" ry="2"/>
+      <ellipse cx="32" cy="36" rx="3" ry="2"/>
+    </g>
+    <g fill="#F38A4B" stroke="#A33D1F" stroke-width=".5">
+      <ellipse cx="28" cy="34" rx="3" ry="1.6"/>
+    </g>
+  </symbol>
+
+  <!-- Rice bowl -->
+  <symbol id="i-rice" viewBox="0 0 56 56">
+    <path d="M10 30 Q 10 44, 28 44 Q 46 44, 46 30 Z" fill="#A6824B"/>
+    <ellipse cx="28" cy="30" rx="18" ry="3" fill="#3a2418"/>
+    <ellipse cx="28" cy="28" rx="17" ry="2.5" fill="#F9F4E9"/>
+    <g fill="#FFFFFF">
+      <ellipse cx="22" cy="27" rx="1.4" ry=".8"/>
+      <ellipse cx="28" cy="26" rx="1.4" ry=".8"/>
+      <ellipse cx="34" cy="27" rx="1.4" ry=".8"/>
+      <ellipse cx="25" cy="29" rx="1.4" ry=".8"/>
+      <ellipse cx="31" cy="29" rx="1.4" ry=".8"/>
+    </g>
+  </symbol>
+
+  <!-- Sticky rice in basket -->
+  <symbol id="i-sticky" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="18" ry="2" fill="#A6824B" opacity=".3"/>
+    <path d="M12 26 L 14 42 Q 14 44, 16 44 L 40 44 Q 42 44, 42 42 L 44 26 Z" fill="#C8975C"/>
+    <g stroke="#8C5A2A" stroke-width="0.8" fill="none">
+      <path d="M12 30 L 44 30"/>
+      <path d="M12 34 L 44 34"/>
+      <path d="M12 38 L 44 38"/>
+    </g>
+    <ellipse cx="28" cy="26" rx="16" ry="3" fill="#F9F4E9"/>
+    <g fill="#FFFFFF">
+      <ellipse cx="22" cy="25" rx="1.4" ry=".8"/>
+      <ellipse cx="28" cy="24" rx="1.4" ry=".8"/>
+      <ellipse cx="34" cy="25" rx="1.4" ry=".8"/>
+    </g>
+  </symbol>
+
+  <!-- Beer mug -->
+  <symbol id="i-beer" viewBox="0 0 56 56">
+    <rect x="16" y="16" width="20" height="32" rx="2" fill="#F4D193" stroke="#A6824B" stroke-width="1.2"/>
+    <rect x="36" y="22" width="8" height="14" rx="3" fill="none" stroke="#A6824B" stroke-width="1.2"/>
+    <ellipse cx="26" cy="18" rx="10" ry="3" fill="#F9F4E9"/>
+    <circle cx="22" cy="16" r="1.6" fill="#F9F4E9"/>
+    <circle cx="30" cy="15" r="2" fill="#F9F4E9"/>
+    <g stroke="#C8975C" stroke-width=".8" fill="none">
+      <line x1="20" y1="26" x2="20" y2="44"/>
+      <line x1="32" y1="26" x2="32" y2="44"/>
+    </g>
+  </symbol>
+
+  <!-- Coconut (whole with straw) -->
+  <symbol id="i-coconut" viewBox="0 0 56 56">
+    <circle cx="28" cy="32" r="16" fill="#6B3520"/>
+    <g fill="#3a1810" opacity=".5">
+      <ellipse cx="22" cy="26" rx="3" ry="2"/>
+      <ellipse cx="34" cy="36" rx="3" ry="2"/>
+    </g>
+    <ellipse cx="28" cy="18" rx="6" ry="3" fill="#3a1810"/>
+    <ellipse cx="28" cy="17" rx="5" ry="2.2" fill="#F9F4E9"/>
+    <rect x="26" y="6" width="2.5" height="14" fill="#C8542B"/>
+  </symbol>
+
+  <!-- Thai iced tea -->
+  <symbol id="i-tea" viewBox="0 0 56 56">
+    <path d="M18 16 L 20 46 Q 20 48, 22 48 L 34 48 Q 36 48, 36 46 L 38 16 Z" fill="#E89D5C" stroke="#A33D1F" stroke-width="1"/>
+    <rect x="18" y="16" width="20" height="3" fill="#F2E9D8"/>
+    <rect x="26" y="10" width="2.5" height="18" fill="#C8542B"/>
+    <rect x="26" y="10" width="2.5" height="3" fill="#A33D1F"/>
+  </symbol>
+
+  <!-- Lime soda -->
+  <symbol id="i-lime" viewBox="0 0 56 56">
+    <path d="M18 18 L 20 46 Q 20 48, 22 48 L 34 48 Q 36 48, 36 46 L 38 18 Z" fill="#A9C36F" opacity=".7" stroke="#5C7341" stroke-width="1"/>
+    <ellipse cx="28" cy="18" rx="10" ry="3" fill="#5C7341"/>
+    <ellipse cx="28" cy="17" rx="9" ry="2.4" fill="#C7DA94"/>
+    <!-- bubbles -->
+    <g fill="#FFFFFF" opacity=".7">
+      <circle cx="24" cy="28" r="1.2"/>
+      <circle cx="32" cy="34" r="1"/>
+      <circle cx="26" cy="38" r="1"/>
+      <circle cx="30" cy="42" r="1.2"/>
+    </g>
+    <!-- lime wedge -->
+    <g transform="translate(28 18)">
+      <path d="M-6 -3 L 6 -3 L 0 4 Z" fill="#C7DA94" stroke="#5C7341" stroke-width=".6"/>
+    </g>
+    <!-- straw -->
+    <rect x="26" y="6" width="2.5" height="16" fill="#C8542B"/>
+  </symbol>
+
+  <!-- Tom Kha (coconut soup) -->
+  <symbol id="i-tomkha" viewBox="0 0 56 56">
+    <ellipse cx="28" cy="46" rx="20" ry="2" fill="#A33D1F" opacity=".15"/>
+    <path d="M10 28 Q 10 44, 28 44 Q 46 44, 46 28 Z" fill="#F2E9D8"/>
+    <ellipse cx="28" cy="28" rx="18" ry="3" fill="#C9B898"/>
+    <ellipse cx="28" cy="26" rx="17" ry="2.5" fill="#F9F4E9"/>
+    <g fill="#FFFFFF" stroke="#C9B898" stroke-width=".5">
+      <ellipse cx="22" cy="26" rx="2" ry="1"/>
+      <ellipse cx="34" cy="27" rx="2" ry="1"/>
+    </g>
+    <circle cx="28" cy="26" r="1.4" fill="#A9C36F"/>
+    <g stroke="#C9B898" stroke-width="1" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M22 22 Q 24 18, 22 14"/>
+      <path d="M30 22 Q 32 18, 30 14"/>
+    </g>
+  </symbol>
+</svg>
